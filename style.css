@@ -3,3 +3,56 @@ body
     font-family: Gilroy, serif;
     font-size: 20px;
 }
+button{
+    background-color: #298F6B;
+    border-radius: 15px;
+    border: none;
+    height: 50px;
+    width: 300px;
+}
+
+
+
+
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav{
+    display: flex;
+}
+.header_logo{
+    width: 100px;
+    height: 100px;
+    background-color: #90C6B2;
+    color: #90C6B2;
+}
+.nav_item{
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+}
+.header_enter_btn{
+    background-color: #90C6B2;
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.header_info{
+    display: flex;
+    align-items: center;
+}
+.header_add_adv_text{
+    margin: 10px;
+}
+.nav_item_text{
+    padding-top: 15px;
+}

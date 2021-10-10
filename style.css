@@ -3,6 +3,43 @@ body
     font-family: Gilroy, serif;
     font-size: 20px;
 }
+.background_for_results {
+    background-color: #90C6B2;
+    margin: 0 550px 0 250px;
+    width: 100%;
+}
+.flat_page {
+    background-color: #FFFFFF;
+    display: flex;
+}
+.images {
+    margin-right: 15px;
+}
+.description {
+    display: flex;
+}
+.additional_info {
+    font-size: 10px;
+    margin-right: 20px;
+}
+.price_per_meter {
+    font-size: 8px;
+}
+.flat_price {
+    line-height: 0.5;
+}
+.phone_number {
+    width: 170px;
+    height: 50px;
+    color: #FFFFFF;
+}
+.favourites {
+    width: 170px;
+    background-color: #E5E5E5;
+}
+.search_result {
+    padding-left: 250px;
+}
 button{
     background-color: #298F6B;
     border-radius: 15px;

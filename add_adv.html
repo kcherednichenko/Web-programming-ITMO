@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Add-adv</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<header class="header">
+    <div class="header_info">
+        <div class="header_logo">logo</div>
+        <ul class="nav">
+            <li class="nav_item">
+                <a  href="#" class="nav_item_text">Аренда</a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_item_text">Продажа</a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_item_text">Ипотека</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header_buttons">
+        <button class="header_add_adv_btn">
+            <p class="header_add_adv_text">+ Добавить объявление</p>
+        </button>
+        <button class="header_enter_btn">
+            <p class="header_add_adv_text">Войти</p>
+        </button>
+    </div>
+</header>
+
+
+<!--add_adv-->
+<div class="content">
+    <div class="add_adv">
+        <div class="add_adv_header">Разместить новое объявление</div>
+        <form class="add_adv_form">
+            <ul class="add_adv_info">
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Кто вы?</div>
+                    <button class="add_adv_option active">Владелец</button>
+                    <button class="add_adv_option">Риэлтор</button>
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Тип сделки</div>
+                    <button class="add_adv_option">Аренда</button>
+                    <button class="add_adv_option active">Продажа</button>
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Тип недвижимости</div>
+                    <button class="add_adv_option active">Жилая</button>
+                    <button class="add_adv_option">Коммерческая</button>
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Объект сделки</div>
+                    <ul class="object_options">
+                        <li class="object_options_item"><span>Офис</span></li>
+                        <li class="object_options_item"><span>Скадское помешение</span></li>
+                        <li class="object_options_item active_object"><span>Здание</span></li>
+                        <li class="object_options_item"><span>Гараж</span></li>
+                        <li class="object_options_item"><span>Торговое место</span></li>
+                    </ul>
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Об объекте</div>
+                    <div class="add_adv_parameters">
+                        <div class="object_parameter_name">
+                            <div class="object_parameter_name_text">Количество помещений</div>
+                            <div class="object_parameter_name_text">Площадь  (кв. м.)</div>
+                            <div class="object_parameter_name_text">Высота  ( м.)</div>
+                            <div class="object_parameter_name_text">Состояние</div>
+                            <div class="object_parameter_name_text">Мебель</div>
+                        </div>
+                        <div class="object_parameter_info_input">
+                            <input type="text" name="room_number" class="object_parameter_input">
+                            <input type="text" name="area" class="object_parameter_input">
+                            <input type="text" name="height" class="object_parameter_input">
+                            <input type="text" name="condition" class="object_parameter_input">
+                            <span class="furniture_buttons">
+                                <button class="add_adv_option">да</button>
+                                <button class="add_adv_option active">нет</button>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Адрес</div>
+                    <input type="text" name="location" class="object_parameter_input object_parameter_input--location">
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Фото</div>
+                    <div class="add_adv_photo_field">
+                        <i class="fas fa-laptop-house"></i>
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Описание</div>
+                    <input type="text" name="room_number" class="object_parameter_input object_parameter_input_description">
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Контактный номер</div>
+                    <input type="text" name="contact_number" class="object_parameter_input">
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Цена</div>
+                    <input type="text" name="price" class="object_parameter_input">
+                </li>
+                <li class="add_adv_info_item">
+                    <div class="add_adv_info_item_title">Заголовок</div>
+                    <input type="text" name="title" class="object_parameter_input object_parameter_input--location">
+                </li>
+                <li class="add_adv_submit_button_field">
+                    <button type="submit" class="add_adv_submit_button">Добавить объявление</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="advertisement">
+        <span class="advertisement_title">Популярные объявления</span>
+        <a class="advertisement_item">
+            <img src="/images/side-panel-adv/side_panel_adv_1.png" alt="adv_1">
+        </a>
+        <div class="advertisement_item">
+            <img src="/images/side-panel-adv/side_panel_adv_2.png" alt="adv_1">
+        </div>
+        <div class="advertisement_item">
+            <img src="/images/side-panel-adv/side_panel_adv_3.png" alt="adv_1">
+        </div>
+    </div>
+</div>
+</body>
+</html>

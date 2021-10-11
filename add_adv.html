@@ -25,9 +25,6 @@
         </ul>
     </div>
     <div class="header_buttons">
-        <button class="header_add_adv_btn">
-            <p class="header_add_adv_text">+ Добавить объявление</p>
-        </button>
         <button class="header_enter_btn">
             <p class="header_add_adv_text">Войти</p>
         </button>
@@ -77,9 +74,9 @@
                             <div class="object_parameter_name_text">Мебель</div>
                         </div>
                         <div class="object_parameter_info_input">
-                            <input type="text" name="room_number" class="object_parameter_input">
-                            <input type="text" name="area" class="object_parameter_input">
-                            <input type="text" name="height" class="object_parameter_input">
+                            <input type="number" name="room_number" class="object_parameter_input">
+                            <input type="number" name="area" class="object_parameter_input">
+                            <input type="number" name="height" class="object_parameter_input">
                             <input type="text" name="condition" class="object_parameter_input">
                             <span class="furniture_buttons">
                                 <button class="add_adv_option">да</button>
@@ -95,8 +92,10 @@
                 <li class="add_adv_info_item">
                     <div class="add_adv_info_item_title">Фото</div>
                     <div class="add_adv_photo_field">
-                        <i class="fas fa-laptop-house"></i>
-                        <i class="fas fa-laptop-house"></i>
+                        <i class="fas fa-folder-open"></i>
+                        <div class="upload_photo_description">
+                            Загрузите свое фото сюда...
+                        </div>
                     </div>
                 </li>
                 <li class="add_adv_info_item">
@@ -105,11 +104,16 @@
                 </li>
                 <li class="add_adv_info_item">
                     <div class="add_adv_info_item_title">Контактный номер</div>
-                    <input type="text" name="contact_number" class="object_parameter_input">
+                    <input type="number" name="contact_number" class="object_parameter_input">
                 </li>
                 <li class="add_adv_info_item">
                     <div class="add_adv_info_item_title">Цена</div>
-                    <input type="text" name="price" class="object_parameter_input">
+                    <input type="number" name="price" class="object_parameter_input">
+                    <select name="select_price" class="price">
+                        <option value="dollar">$</option>
+                        <option value="ruble">₽</option>
+                        <option value="MDL">MDL</option>
+                    </select>
                 </li>
                 <li class="add_adv_info_item">
                     <div class="add_adv_info_item_title">Заголовок</div>
@@ -122,7 +126,7 @@
         </form>
     </div>
     <div class="advertisement">
-        <span class="advertisement_title">Популярные объявления</span>
+        <div class="advertisement_title">Популярные объявления</div>
         <a class="advertisement_item">
             <img src="/images/side-panel-adv/side_panel_adv_1.png" alt="adv_1">
         </a>

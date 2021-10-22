@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="header">
+    <div class="header_info">
+        <div class="header_logo">logo</div>
+        <ul class="nav">
+            <li class="nav_item">
+                <div class="nav_item_text">Аренда</div>
+            </li>
+            <li class="nav_item">
+                <div class="nav_item_text">Продажа</div>
+            </li>
+            <li class="nav_item">
+                <div class="nav_item_text">Ипотека</div>
+            </li>
+        </ul>
+    </div>
+    <div class="header_buttons">
+        <button class="header_add_adv_btn">
+            <p class="header_add_adv_text">+ Добавить объявление</p>
+        </button>
+        <button class="header_enter_btn">
+            <p class="header_add_adv_text">Войти</p>
+        </button>
+    </div>
+</header>
+<main>
+    <h1 class="page-title">Поиск ипотек</h1>
+    <div class="filters">
+        <h3 class="filter__header">Фильтры</h3>
+        <div class="filter__item">
+            <div class="filter__name">цена</div>
+            <input type="number" class="filter__value" placeholder="1 200 000">
+        </div>
+        <div class="filter__item">
+            <div class="filter__name">количесво комнат</div>
+            <input type="number" class="filter__value" placeholder="2">
+        </div>
+        <div class="filter__item">
+            <div class="filter__item__name">метро</div>
+            <input type="text" class="filter__value" placeholder="Петроградская">
+        </div>
+        <div class="filter__item">
+            <div class="filter__name">процентная ставка</div>
+            <input type="number" class="filter__value" placeholder="8.69%">
+        </div>
+    </div>
+    <div class="mortgage-list">
+        <div class="mortgage-list__item">
+            <img src="/images/mortgage_find/new-terra.png" alt="mortgage-list-1">
+            <div class="mortgage-list__info">
+                <h2 class="mortgage-list__title">New Terra</h2>
+                <h4 class="mortgage-list__subtitle">дом и парк</h4>
+                <div class="mortgage-list__buttons">
+                    <button class="show-number-button">Показать телефон</button>
+                    <button class="add-to-favourite-button">Добавить в избранное</button>
+                </div>
+            </div>
+        </div>
+        <div class="mortgage-list__item">
+            <img src="/images/mortgage_find/white-island.png" alt="mortgage-list-2">
+            <div class="mortgage-list__info">
+                <h2 class="mortgage-list__title">Белый Остров</h2>
+                <h4 class="mortgage-list__subtitle mortgage-list__subtitle--hidden">no subtitle</h4>
+                <div class="mortgage-list__buttons">
+                    <button class="show-number-button">Показать телефон</button>
+                    <button class="add-to-favourite-button">Добавить в избранное</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

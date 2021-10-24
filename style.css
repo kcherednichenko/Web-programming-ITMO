@@ -88,37 +88,36 @@ select{
 .content{
     display: flex;
     justify-content: space-between;
-    margin-left: 200px;
 }
-.add_adv_header{
+.add-adv__header{
     font-size: 36px;
     margin-left: 40px;
 }
 
-.add_adv{
+.add-adv{
     width: 70%;
     padding-right: 50px;
 }
 
-.add_adv_form{
+.add-adv__form{
     background-color: #90C6B2;
 }
-.add_adv_info{
+.add-adv__info{
     list-style-type: none;
 }
-.add_adv_info:first-child{
+.add-adv__info:first-child{
     padding-top: 30px;
 }
-.add_adv_info_item{
+.add-adv__info__item{
     display: flex;
     margin-bottom: 20px;
 }
-.add_adv_info_item_title{
+.add-adv__form__title{
     font-weight: 300;
     width: 225px;
     height: 40px;
 }
-.add_adv_option{
+.add-adv__option{
     font-size: 20px;
     margin-right: 30px;
     width: 211px;
@@ -126,36 +125,36 @@ select{
     border-radius: 20px;
     transition: color,background-color .2s linear;
 }
-.add_adv_option:hover{
+.add-adv__option:hover{
     background-color: black;
     color:white;
 }
 
-.add_adv_info_item .active{
+.add-adv__info__item .active{
     background-color: black;
     color: white;
 }
-.object_options{
+.object-options{
     list-style-type: none;
     padding-left: unset;
 }
-.object_options .active_object{
+.object-options .active_object{
     color: white;
 }
-.object_options .active_object:before{
+.object-options .active_object:before{
     color: black;
 }
-.object_options_item:hover{
+.object-options__item:hover{
     color:white;
 }
-.object_options_item:hover:before{
+.object-options__item:hover:before{
     color: black;
 }
-.object_options_item{
+.object-options__item{
     cursor: pointer;
     transition: color .2s linear;
 }
-.object_options_item::before{
+.object-options__item::before{
     content:".";
     color: #298F6B;
     margin-right: 10px;
@@ -163,16 +162,13 @@ select{
     line-height: 0.3;
     transition: color .2s linear;
 }
-.add_adv_parameters{
+
+.add-adv__parameter{
     display: flex;
+    align-items: baseline;
 }
-.object_parameter_info_input{
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-.object_parameter_name_text{
-    margin-top: 20px;
+.add-adv__parameter__text{
+    width: 270px;
 }
 .object_parameter_input{
     background-color: #298F6B;
@@ -185,14 +181,15 @@ select{
     font-weight: bold;
     padding-left: 10px;
 }
-.object_parameter_info_input .add_adv_option{
+.furniture_buttons .add-adv__option{
     width: 105px;
     margin-left: 0;
+    border-radius: 20px;
 }
 .furniture_buttons{
     display: flex;
 }
-.furniture_buttons .add_adv_option:first-child{
+.furniture_buttons .add-adv__option:first-child{
     margin-right: 3px;
 }
 .object_parameter_input--location{
@@ -212,13 +209,13 @@ select{
     cursor: pointer;
 }
 .upload_photo_description{
-    /*color: white;*/
     font-weight: 300;
     margin-bottom: auto;
 }
 .object_parameter_input_description{
     width: 575px;
     height: 150px;
+    text-align: justify;
 }
 .add_adv_submit_button_field{
     display: flex;
@@ -241,13 +238,44 @@ select{
 /*advertisement*/
 .advertisement{
 }
-.advertisement_title{
+.advertisement-title{
     font-size: 36px;
     margin-bottom: 30px;
 }
-.advertisement_item{
+.advertisement__item{
+    position: relative;
+    border-radius: 20px;
     margin-top: 30px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #00b09b, #96c93d);    padding: 100px;
 }
+.side-panel-image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .2s linear;
+}
+.advertisement__item:hover .side-panel-image{
+    opacity: 0.3;
+}
+.side-panel-info__header{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    color: white;
+    text-transform: uppercase;
+}
+.side-panel-links{
+    position: absolute;
+    top: 69%;
+    left: 40%;
+    color: white;
+    font-size: 36px;
+}
+
+
 
 
 /*ипотека(mortgage)*/
@@ -300,6 +328,7 @@ select{
 }
 .filter__value{
     color: white;
+    font-weight: bold;
     background-color: #298F6B;
     font-size: 20px;
     border: none;
@@ -342,6 +371,9 @@ select{
     text-align: center;
     font-size: 36px;
     margin-top: 0;
+}
+.mortgage-list__subtitle--hidden{
+    opacity: 0;
 }
 
 .mortgage-list__buttons{

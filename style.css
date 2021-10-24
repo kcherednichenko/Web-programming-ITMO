@@ -277,8 +277,6 @@ select{
 }
 
 
-
-
 /*ипотека(mortgage)*/
 .mortgage{
     position: absolute;
@@ -373,6 +371,7 @@ select{
     font-size: 36px;
     margin-top: 0;
 }
+
 .mortgage-list__subtitle--hidden{
     opacity: 0;
 }
@@ -389,5 +388,8 @@ select{
 .add-to-favourite-button{
     width: auto;
     padding: 0 30px;
-    background-color: white;
+    background-color: #E5E5E5;;
+}
+.mortgage-list__subtitle--hidden{
+    opacity: 0;
 }

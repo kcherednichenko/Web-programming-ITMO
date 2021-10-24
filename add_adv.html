@@ -14,7 +14,7 @@
         <div class="header_logo">logo</div>
         <ul class="nav">
             <li class="nav_item">
-                <a  href="#" class="nav_item_text">Аренда</a>
+                <a href="#" class="nav_item_text">Аренда</a>
             </li>
             <li class="nav_item">
                 <a href="#" class="nav_item_text">Продажа</a>
@@ -33,110 +33,155 @@
 
 
 <!--add_adv-->
-<div class="content">
-    <div class="add_adv">
-        <div class="add_adv_header">Разместить новое объявление</div>
-        <form class="add_adv_form">
-            <ul class="add_adv_info">
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Кто вы?</div>
-                    <button class="add_adv_option active">Владелец</button>
-                    <button class="add_adv_option">Риэлтор</button>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Тип сделки</div>
-                    <button class="add_adv_option">Аренда</button>
-                    <button class="add_adv_option active">Продажа</button>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Тип недвижимости</div>
-                    <button class="add_adv_option active">Жилая</button>
-                    <button class="add_adv_option">Коммерческая</button>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Объект сделки</div>
-                    <ul class="object_options">
-                        <li class="object_options_item"><span>Офис</span></li>
-                        <li class="object_options_item"><span>Скадское помешение</span></li>
-                        <li class="object_options_item active_object"><span>Здание</span></li>
-                        <li class="object_options_item"><span>Гараж</span></li>
-                        <li class="object_options_item"><span>Торговое место</span></li>
-                    </ul>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Об объекте</div>
-                    <div class="add_adv_parameters">
-                        <div class="object_parameter_name">
-                            <div class="object_parameter_name_text">Количество помещений</div>
-                            <div class="object_parameter_name_text">Площадь  (кв. м.)</div>
-                            <div class="object_parameter_name_text">Высота  ( м.)</div>
-                            <div class="object_parameter_name_text">Состояние</div>
-                            <div class="object_parameter_name_text">Мебель</div>
-                        </div>
-                        <div class="object_parameter_info_input">
-                            <input type="number" name="room_number" class="object_parameter_input">
-                            <input type="number" name="area" class="object_parameter_input">
-                            <input type="number" name="height" class="object_parameter_input">
-                            <input type="text" name="condition" class="object_parameter_input">
-                            <span class="furniture_buttons">
-                                <button class="add_adv_option">да</button>
-                                <button class="add_adv_option active">нет</button>
+<main>
+    <div class="content">
+        <div class="add-adv">
+            <h1 class="add-adv__header">Разместить новое объявление</h1>
+            <form class="add-adv__form">
+                <ul class="add-adv__info">
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Кто вы?</div>
+                        <button class="add-adv__option active">Владелец</button>
+                        <button class="add-adv__option">Риэлтор</button>
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Тип сделки</div>
+                        <button class="add-adv__option">Аренда</button>
+                        <button class="add-adv__option active">Продажа</button>
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Тип недвижимости</div>
+                        <button class="add-adv__option active">Жилая</button>
+                        <button class="add-adv__option">Коммерческая</button>
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Объект сделки</div>
+                        <ul class="object-options">
+                            <li class="object-options__item"><span>Офис</span></li>
+                            <li class="object-options__item"><span>Скадское помешение</span></li>
+                            <li class="object-options__item active_object"><span>Здание</span></li>
+                            <li class="object-options__item"><span>Гараж</span></li>
+                            <li class="object-options__item"><span>Торговое место</span></li>
+                        </ul>
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Об объекте</div>
+                        <div class="add-adv__parameters">
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Количество помещений</div>
+                                <label>
+                                    <input type="number" name="room_number" class="object_parameter_input">
+                                </label>
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Площадь (кв. м.)</div>
+                                <input type="number" name="area" class="object_parameter_input">
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Высота ( м.)</div>
+                                <input type="number" name="height" class="object_parameter_input">
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Состояние</div>
+                                <input type="text" name="condition" class="object_parameter_input">
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Мебель</div>
+                                <span class="furniture_buttons">
+                                <button class="add-adv__option">да</button>
+                                <button class="add-adv__option active">нет</button>
                             </span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Адрес</div>
-                    <input type="text" name="location" class="object_parameter_input object_parameter_input--location">
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Фото</div>
-                    <div class="add_adv_photo_field">
-                        <i class="fas fa-folder-open"></i>
-                        <div class="upload_photo_description">
-                            Загрузите свое фото сюда...
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Адрес</div>
+                        <input type="text" name="location"
+                               class="object_parameter_input object_parameter_input--location">
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Фото</div>
+                        <div class="add_adv_photo_field">
+                            <i class="fas fa-folder-open"></i>
+                            <div class="upload_photo_description">
+                                Загрузите свое фото сюда...
+                            </div>
                         </div>
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Описание</div>
+                        <input type="text" name="room_number"
+                               class="object_parameter_input object_parameter_input_description">
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Контактный номер</div>
+                        <input type="number" name="contact_number" class="object_parameter_input">
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Цена</div>
+                        <input type="number" name="price" class="object_parameter_input">
+                        <select name="select_price" class="price">
+                            <option value="dollar">$</option>
+                            <option value="ruble">₽</option>
+                            <option value="MDL">MDL</option>
+                        </select>
+                    </li>
+                    <li class="add-adv__info__item">
+                        <div class="add-adv__form__title">Заголовок</div>
+                        <input type="text" name="title" class="object_parameter_input object_parameter_input--location">
+                    </li>
+                    <li class="add_adv_submit_button_field">
+                        <button type="submit" class="add_adv_submit_button">Добавить объявление</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="advertisement">
+            <h1 class="advertisement-title">Популярные объявления</h1>
+            <div class="advertisement__item">
+                <div class="side-panel-info">
+                    <h3 class="side-panel-info__header">дом в центре на Варшавке</h3>
+                    <div class="side-panel-links">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-share"></i>
                     </div>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Описание</div>
-                    <input type="text" name="room_number" class="object_parameter_input object_parameter_input_description">
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Контактный номер</div>
-                    <input type="number" name="contact_number" class="object_parameter_input">
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Цена</div>
-                    <input type="number" name="price" class="object_parameter_input">
-                    <select name="select_price" class="price">
-                        <option value="dollar">$</option>
-                        <option value="ruble">₽</option>
-                        <option value="MDL">MDL</option>
-                    </select>
-                </li>
-                <li class="add_adv_info_item">
-                    <div class="add_adv_info_item_title">Заголовок</div>
-                    <input type="text" name="title" class="object_parameter_input object_parameter_input--location">
-                </li>
-                <li class="add_adv_submit_button_field">
-                    <button type="submit" class="add_adv_submit_button">Добавить объявление</button>
-                </li>
-            </ul>
-        </form>
-    </div>
-    <div class="advertisement">
-        <div class="advertisement_title">Популярные объявления</div>
-        <a class="advertisement_item">
-            <img src="/images/side-panel-adv/side_panel_adv_1.png" alt="adv_1">
-        </a>
-        <div class="advertisement_item">
-            <img src="/images/side-panel-adv/side_panel_adv_2.png" alt="adv_1">
-        </div>
-        <div class="advertisement_item">
-            <img src="/images/side-panel-adv/side_panel_adv_3.png" alt="adv_1">
+                </div>
+                <img class="side-panel-image" src="/images/side-panel-adv/side_panel_adv_1.png" alt="adv_1">
+            </div>
+            <div class="advertisement__item">
+                <h3 class="side-panel-info__header">Пентхаус со своим лесом</h3>
+                <div class="side-panel-links">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                </div>
+                <img class="side-panel-image" src="/images/side-panel-adv/side_panel_adv_2.png" alt="adv_1">
+            </div>
+            <div class="advertisement__item">
+                <h3 class="side-panel-info__header">дом с ошеломительным видом на горы</h3>
+                <div class="side-panel-links">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                </div>
+                <img class="side-panel-image" src="/images/side-panel-adv/side_panel_adv_3.png" alt="adv_1">
+            </div>
+            <div class="advertisement__item">
+                <h3 class="side-panel-info__header">квартира в стиле лофт</h3>
+                <div class="side-panel-links">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                </div>
+                <img class="side-panel-image" src="/images/side-panel-adv/side_panel_adv_4.png" alt="adv_1">
+            </div>
+            <div class="advertisement__item">
+                <h3 class="side-panel-info__header">Склад 1гектар в отличном состоянии</h3>
+                <div class="side-panel-links">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                </div>
+                <img class="side-panel-image" src="/images/side-panel-adv/side_panel_adv_5.png" alt="adv_1">
+            </div>
         </div>
     </div>
-</div>
+</main>
 </body>
 </html>

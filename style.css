@@ -678,3 +678,34 @@ by_button {
 .mortgage-list__subtitle--hidden {
     opacity: 0;
 }
+
+.flat_page_info__about_cur_flat {
+    display: flex;
+    border: solid 2px #FFFFFF;
+    /*vertical-align: middle;*/
+    /*text-align: justify;*/
+}
+
+.flat_page_info__about_cur_flat__total_area {
+    padding-right: 5%;
+}
+
+.flat_page_info__about_cur_flat__living_area {
+    padding-right: 5%;
+}
+
+.flat_page_info__about_cur_flat__kitchen {
+    padding-right: 5%;
+}
+
+.flat_page_info__about_cur_flat__floor {
+    padding-right: 5%;
+}
+
+.flat_page_info__about_cur_flat__ceiling {
+    padding-right: 5%;
+}
+
+.flat_page_info__about_cur_flat__built_in {
+    padding-right: 5%;
+}

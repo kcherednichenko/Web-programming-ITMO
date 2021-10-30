@@ -202,7 +202,7 @@ by_button {
     padding-bottom: 20px;
 }
 
-.views_and_price {
+.flat_page__price__views_and_price {
     font-size: 10px;
 }
 
@@ -219,10 +219,14 @@ by_button {
     font-size: 200px;
 }
 
-.views {
+.flat_page__price__views_and_price__views {
     color: #828181;
     font-size: 8px;
     line-height: 0.5;
+}
+
+.flat_page__price__views_and_price__price {
+    font-size: 20px;
 }
 
 .flat_page_info__about_cur_flat {
@@ -708,4 +712,70 @@ by_button {
 
 .flat_page_info__about_cur_flat__built_in {
     padding-right: 5%;
+}
+
+.flat_page__tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+.flat_page__tags__mortgage {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #298F6B;
+    margin: 7px;
+}
+
+.flat_page__tags__show_online {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__rented {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__leased_house {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__bargaining {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__easy_sale {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__phone_number {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: #EAEE1A;
+    padding: 10px;
+    margin: 7px;
+}
+
+.flat_page__tags__favourites {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: #E5E5E5;
+    padding: 10px;
+    margin: 7px;
 }

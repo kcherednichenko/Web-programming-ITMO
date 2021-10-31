@@ -725,3 +725,26 @@ by_button {
     padding: 10px;
     margin: 7px;
 }
+
+/*footer*/
+
+footer {
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.footer-inner {
+    display: flex;
+}
+.footer__developers{
+    padding-left: 300px;
+}
+.fa-heart{
+    color: #e81818;
+}
+.fa-instagram{
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(darkmagenta, red, yellow);
+}

@@ -193,9 +193,9 @@ by_button {
 
 .background_for_one_flat_page {
     background-color: #90C6B2;
-    margin: 0 550px 0 250px;
-    width: 100%;
+    margin: 0 550px 0 200px;
     display: flex;
+    max-width: 1300px;
 }
 
 .flat_history_buttons_block {
@@ -212,7 +212,7 @@ by_button {
 
 .flat_page__price {
     width: 70%;
-    margin-left: 145px;
+    margin-left: 20px;
 }
 
 .flat_page__info__image {
@@ -291,14 +291,6 @@ by_button {
     padding-top: 15px;
 }
 
-
-.background_for_one_flat_page {
-    background-color: #90C6B2;
-    margin: 0 550px 0 250px;
-    width: 100%;
-    display: flex;
-}
-
 .flat_history_buttons_block {
     padding-bottom: 20px;
 }
@@ -309,11 +301,6 @@ by_button {
 
 .flat_page__info {
     width: 70%;
-}
-
-.flat_page__price {
-    width: 70%;
-    margin-left: 145px;
 }
 
 .flat_page__info__image {
@@ -686,31 +673,12 @@ by_button {
 .flat_page_info__about_cur_flat {
     display: flex;
     border: solid 2px #FFFFFF;
+    justify-content: space-evenly;
     /*vertical-align: middle;*/
     /*text-align: justify;*/
 }
 
-.flat_page_info__about_cur_flat__total_area {
-    padding-right: 5%;
-}
-
-.flat_page_info__about_cur_flat__living_area {
-    padding-right: 5%;
-}
-
-.flat_page_info__about_cur_flat__kitchen {
-    padding-right: 5%;
-}
-
-.flat_page_info__about_cur_flat__floor {
-    padding-right: 5%;
-}
-
-.flat_page_info__about_cur_flat__ceiling {
-    padding-right: 5%;
-}
-
-.flat_page_info__about_cur_flat__built_in {
+.flat_page_info__about_cur_flat__item {
     padding-right: 5%;
 }
 

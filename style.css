@@ -1,5 +1,5 @@
 body {
-    font-family: Gilroy, serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 20px;
 }
@@ -156,14 +156,14 @@ by_button {
 }
 
 button {
-    font-family: Gilroy, serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #298F6B;
     border-radius: 15px;
     border: none;
     height: 50px;
     width: 300px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: lighter;
     cursor: pointer;
 }
 
@@ -357,6 +357,7 @@ by_button {
 .add-adv__info__item {
     display: flex;
     margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 .add-adv__form__title {

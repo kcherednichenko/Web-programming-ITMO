@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Add-adv</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -38,23 +41,23 @@
         <div class="add-adv">
             <h1 class="add-adv__header">Разместить новое объявление</h1>
             <form class="add-adv__form">
-                <ul class="add-adv__info">
-                    <li class="add-adv__info__item">
+                <div class="add-adv__info">
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Кто вы?</div>
                         <button class="add-adv__option active">Владелец</button>
                         <button class="add-adv__option">Риэлтор</button>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Тип сделки</div>
                         <button class="add-adv__option">Аренда</button>
                         <button class="add-adv__option active">Продажа</button>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Тип недвижимости</div>
                         <button class="add-adv__option active">Жилая</button>
                         <button class="add-adv__option">Коммерческая</button>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Объект сделки</div>
                         <ul class="object-options">
                             <li class="object-options__item"><span>Офис</span></li>
@@ -63,8 +66,8 @@
                             <li class="object-options__item"><span>Гараж</span></li>
                             <li class="object-options__item"><span>Торговое место</span></li>
                         </ul>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Об объекте</div>
                         <div class="add-adv__parameters">
                             <div class="add-adv__parameter">
@@ -93,13 +96,13 @@
                             </span>
                             </div>
                         </div>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Адрес</div>
                         <input type="text" name="location"
                                class="object_parameter_input object_parameter_input--location">
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Фото</div>
                         <div class="add_adv_photo_field">
                             <i class="fas fa-folder-open"></i>
@@ -107,17 +110,17 @@
                                 Загрузите свое фото сюда...
                             </div>
                         </div>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Описание</div>
                         <input type="text" name="room_number"
                                class="object_parameter_input object_parameter_input_description">
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Контактный номер</div>
-                        <input type="number" name="contact_number" class="object_parameter_input">
-                    </li>
-                    <li class="add-adv__info__item">
+                        <input type="tel" name="contact_number" class="object_parameter_input">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Цена</div>
                         <input type="number" name="price" class="object_parameter_input">
                         <select name="select_price" class="price">
@@ -125,15 +128,15 @@
                             <option value="ruble">₽</option>
                             <option value="MDL">MDL</option>
                         </select>
-                    </li>
-                    <li class="add-adv__info__item">
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Заголовок</div>
                         <input type="text" name="title" class="object_parameter_input object_parameter_input--location">
-                    </li>
-                    <li class="add_adv_submit_button_field">
+                    </div>
+                    <div class="add_adv_submit_button_field">
                         <button type="submit" class="add_adv_submit_button">Добавить объявление</button>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="advertisement">
@@ -154,7 +157,7 @@
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-share"></i>
                 </div>
-                <img class="side-panel-image" src="/images/side-panel-adv/side_panel_adv_2.png" alt="adv_1">
+                <img class="side-panel-image" src="images/side-panel-adv/side_panel_adv_2.png" alt="adv_1">
             </div>
             <div class="advertisement__item">
                 <h3 class="side-panel-info__header">дом с ошеломительным видом на горы</h3>

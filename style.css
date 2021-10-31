@@ -117,9 +117,6 @@ body {
     padding-left: 250px;
 }
 
-main {
-    margin: 100px;
-}
 
 by_button {
     color: #828181;
@@ -747,4 +744,23 @@ footer {
     border-radius: 5px;
     color: white;
     background: linear-gradient(darkmagenta, red, yellow);
+}
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+}
+@media screen and (max-width: 990px) {
+    main{
+        margin: 50px;
+    }
+}
+@media screen and (max-width: 770px) {
+
+}
+@media screen and (max-width: 550px) {
+
 }

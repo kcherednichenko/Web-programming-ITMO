@@ -2,6 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
 }
 
 .flat_page {
@@ -50,16 +56,6 @@ body {
 
 .search_result {
     padding-left: 250px;
-}
-
-main {
-    margin: 100px;
-}
-
-body {
-    font-family: Gilroy, serif;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .background_for_results {
@@ -149,6 +145,7 @@ select {
     padding-left: 5px;
     margin-left: 5px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 
@@ -163,6 +160,70 @@ by_button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header_buttons{
+    display: flex;
+}
+.header_add_adv_btn{
+    width: auto;
+}
+
+.menu-toggle{
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 26px;
+    background: transparent;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    color: black;
+    font-size: 0;
+    transition: all .25s ease-in-out;
+    outline: none;
+    border-radius: unset;
+    margin-right: 10px;
+}
+.menu-toggle:before, .menu-toggle:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    background: black;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: -webkit-transform 0.25s ease-in-out;
+}
+
+.menu-toggle.is-active:before {
+    transform: translate(-50%, -50%) rotate(
+            45deg);
+}
+.menu-toggle.is-active:after {
+    -webkit-transform: translate(-50%, -50%) rotate(
+            -45deg);
+    transform: translate(-50%, -50%) rotate(
+            -45deg);
+}
+
+/*popup*/
+.popup_nav{
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100px;
+    z-index: 3;
+    background-image: linear-gradient(45deg, #90C6B2 0%,#85FFBD, #298F6B 100%);
+}
+.popup_nav__item{
+    border-bottom: white 2px solid;
+    padding: 5px 0 ;
 }
 
 .background_for_one_flat_page {
@@ -223,8 +284,8 @@ by_button {
 }
 
 .header_logo {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     background-color: #90C6B2;
     color: #90C6B2;
 }
@@ -405,6 +466,9 @@ by_button {
     font-weight: bold;
     padding-left: 10px;
 }
+.object_parameter_input--large {
+    width: 60%
+}
 
 .furniture_buttons .add-adv__option {
     width: 105px;
@@ -423,6 +487,7 @@ by_button {
 .object_parameter_input--location {
     width: 575px;
 }
+
 
 .add_adv_photo_field {
     width: 612px;
@@ -450,6 +515,7 @@ by_button {
     height: 150px;
     text-align: justify;
 }
+
 
 .add_adv_submit_button_field {
     display: flex;
@@ -481,41 +547,53 @@ by_button {
 }
 
 .advertisement__item {
-    position: relative;
     border-radius: 20px;
+    position: relative;
     margin-top: 30px;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     background-image: linear-gradient(to right, #00b09b, #96c93d);
-    padding: 100px;
+
 }
 
 .side-panel-image {
-    position: absolute;
-    left: 0;
-    top: 0;
+    flex-shrink: 0;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     transition: opacity .2s linear;
+    cursor: pointer;
 }
 
 .advertisement__item:hover .side-panel-image {
     opacity: 0.3;
 }
+.advertisement__item:hover .side-panel-info__header {
+    opacity: 1;
+}
+.advertisement__item:hover .side-panel-links {
+    opacity: 1;
+}
 
 .side-panel-info__header {
+    opacity: 0;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 15%;
     color: white;
     text-transform: uppercase;
+    transition: opacity .2s linear;
 }
 
 .side-panel-links {
+    opacity: 0;
     position: absolute;
-    top: 69%;
+    top: 60%;
     left: 40%;
     color: white;
     font-size: 36px;
+    transition: opacity .2s linear;
 }
 
 
@@ -534,6 +612,12 @@ by_button {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.mortgage_background{
+    max-width: 1730px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mortgage__text {
@@ -556,8 +640,14 @@ by_button {
 
 /*filters*/
 .filters {
+    padding-left: 20px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+
+}
+.filters__inner{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .filter__item {
@@ -567,11 +657,12 @@ by_button {
     border-radius: 20px;
     align-items: center;
     height: 30px;
-    margin-left: 30px;
-    padding: 0 20px;
+    margin: 0 0 20px 30px;
+    padding: 3px 20px;
 }
 
 .filter__value {
+    margin-left: 5px;
     color: white;
     font-weight: bold;
     background-color: #298F6B;
@@ -592,6 +683,11 @@ by_button {
     margin-left: 100px;
     overflow: hidden;
     margin-top: 30px;
+    max-width: 1600px;
+}
+.mortgage-list__image{
+    height: 100%;
+    object-fit: cover;
 }
 
 .mortgage-list__item {
@@ -626,6 +722,7 @@ by_button {
 
 .mortgage-list__buttons {
     display: flex;
+    margin: 0 20px 20px;
 }
 
 .show-number-button {
@@ -731,15 +828,17 @@ footer {
 }
 
 .footer-inner {
-    display: flex;
+    width: 100%;
+    text-align: center;
 }
-.footer__developers{
-    padding-left: 300px;
-}
-.fa-heart{
+
+.fa-heart {
     color: #e81818;
 }
-.fa-instagram{
+
+.fa-instagram {
+    font-weight: 400;
+    padding: 2px 3px;
     cursor: pointer;
     border-radius: 5px;
     color: white;
@@ -747,20 +846,204 @@ footer {
 }
 
 
-
-
-
 @media screen and (max-width: 1400px) {
-
-}
-@media screen and (max-width: 990px) {
-    main{
+    main {
         margin: 50px;
     }
+
+    /*add adv*/
+    .add_adv_photo_field {
+        width: 500px;
+    }
+    .object_parameter_input--large{
+        margin-right: 10px;
+    }
+
 }
+
+@media screen and (max-width: 1200px) {
+    /*header*/
+    .nav_item{
+        width: 125px;
+    }
+    main {
+        margin: 30px;
+    }
+
+    /*add adv*/
+    .add-adv__info__item {
+        margin-left: 25px;
+    }
+    .add-adv__parameter{
+        display: block;
+    }
+    .add-adv__parameter__text{
+        margin-bottom: 10px;
+    }
+    /*advertisement*/
+    .side-panel-info__header{
+        font-size: 18px;
+    }
+
+    /*mortgage*/
+    .mortgage-list__title{
+        font-size: 36px;
+    }
+    .mortgage-list__item{
+        margin-right: 30px;
+    }
+    .mortgage-list{
+        margin-left: 30px;
+    }
+    .mortgage-list__image{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+
+    /*add adv*/
+    .add-adv__header{
+        font-size: 28px;
+    }
+    .advertisement-title{
+        font-size: 28px;
+    }
+    .add-adv__option{
+        font-size: 16px;
+    }
+    .content{
+        display: block;
+    }
+    .add-adv{
+        width: 100%;
+    }
+    /*mortgage*/
+    .mortgage-list__title{
+        font-size: 30px;
+    }
+    .mortgage-list__item {
+        display: block;
+        text-align: center;
+    }
+    .mortgage-list__image{
+        width: 100%;
+        height: 100%;
+    }
+    .mortgage-list__buttons{
+        justify-content: center;
+    }
+
+    /*advertisement*/
+    .advertisement-title{
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .advertisement-inner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .advertisement__item{
+        width: 45%;
+        margin-right: 15px;
+    }
+    .side-panel-info__header{
+        font-size: 18px;
+        top: 15%;
+        left: 10%;
+    }
+    .side-panel-links{
+        left: 35%;
+        top: 55%;
+    }
+}
+
 @media screen and (max-width: 770px) {
+    /*header*/
+    .nav_item{
+        width: 100px;
+    }
+    .header_add_adv_text{
+        font-size: 15px;
+    }
 
+    /*add adv*/
+    .add-adv{
+        padding-right: 0;
+    }
+    /*navigation*/
+    .header{
+    }
+    .nav{
+        display: none;
+    }
+    .header_buttons{
+        margin-left: auto;
+    }
+    .menu-toggle{
+        display: block;
+    }
+
+    /*.mortgage*/
+    .filters{
+        display: block;
+    }
+    .page-title{
+        margin-left: 50px;
+    }
+
+     /*advertisement */
+    .advertisement__item{
+        width: 90%;
+        padding: 0;
+        border-radius: 30px;
+    }
+    .side-panel-info__header{
+        font-size: 26px;
+    }
+    .side-panel-links{
+        left: 40%;
+        font-size: 50px;
+    }
 }
-@media screen and (max-width: 550px) {
 
+
+@media screen and (max-width: 550px) {
+    /*header*/
+    .header_add_adv_text{
+        font-size: 12px;
+    }
+    /*add adv*/
+    main{
+        margin: 0;
+    }
+    .add-adv__info__item{
+        display: block;
+    }
+    .add-adv__info__item button{
+        margin: 10px auto;
+
+    }
+    .add_adv_photo_field{
+        width: 90%;
+        margin: 0;
+    }
+    .object_parameter_input_description{
+        width: 90%;
+    }
+    /*advertisement*/
+    .side-panel-info__header{
+        font-size: 20px;
+    }
+    .side-panel-links{
+        font-size: 40px;
+    }
+    /*mortgage*/
+    .mortgage-list__buttons{
+        display: block;
+    }
+    .show-number-button{
+        margin-bottom: 20px;
+    }
 }

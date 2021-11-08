@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>найти ипотеку</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header_info">
+        <div class="header_logo">
+            <img src="images/header/logo.png" alt="logo">
+        </div>
+        <ul class="nav">
+            <li class="nav_item">
+                <a href="#" class="nav_item_text">Аренда</a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_item_text">Продажа</a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_item_text">Ипотека</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header_buttons">
+        <button class="header_add_adv_btn">
+            <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+        </button>
+        <button class="header_enter_btn">
+            <p class="header_add_adv_text">Войти</p>
+        </button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">Menu</button>
+    <ul class="popup_nav" id="popup_nav">
+        <li class="popup_nav__item">
+            <a href="#" class="nav_item_text">Аренда</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="#" class="nav_item_text">Продажа</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="#" class="nav_item_text">Ипотека</a>
+        </li>
+    </ul>
+</header>
+<main>
+    <h1 class="page-title">Поиск ипотек</h1>
+    <div class="filters">
+        <h3 class="filter__header">Фильтры</h3>
+        <div class="filters__inner">
+            <div class="filter__item">
+                <div class="filter__name">цена</div>
+                <label>
+                    <input type="number" class="filter__value" placeholder="1 200 000">
+                </label>
+            </div>
+            <div class="filter__item">
+                <div class="filter__name">количесво&nbspкомнат</div>
+                <label>
+                    <input type="number" class="filter__value" placeholder="2">
+                </label>
+            </div>
+            <div class="filter__item">
+                <div class="filter__item__name">метро</div>
+                <label>
+                    <input type="text" class="filter__value" placeholder="Петроградская">
+                </label>
+            </div>
+            <div class="filter__item">
+                <div class="filter__name">процентная&nbspставка</div>
+                <label>
+                    <input type="number" class="filter__value" placeholder="8.69%">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mortgage-list">
+        <div class="mortgage-list__item">
+            <img class="mortgage-list__image" src="images/mortgage_find/new-terra.png" alt="mortgage-list-1">
+            <div class="mortgage-list__info">
+                <h2 class="mortgage-list__title">New Terra</h2>
+                <h4 class="mortgage-list__subtitle">дом и парк</h4>
+                <div class="mortgage-list__buttons">
+                    <button class="show-number-button">Показать телефон</button>
+                    <button class="add-to-favourite-button">Добавить&nbspв избранное</button>
+                </div>
+            </div>
+        </div>
+        <div class="mortgage-list__item">
+            <img class="mortgage-list__image" src="images/mortgage_find/white-island.png" alt="mortgage-list-2">
+            <div class="mortgage-list__info">
+                <h2 class="mortgage-list__title">Белый Остров</h2>
+                <h4 class="mortgage-list__subtitle mortgage-list__subtitle--hidden">no subtitle</h4>
+                <div class="mortgage-list__buttons">
+                    <button class="show-number-button">Показать телефон</button>
+                    <button class="add-to-favourite-button">Добавить&nbspв избранное</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-inner">
+        <div class="footer__copyright">
+            Copyright © 2021
+        </div>
+        <div class="footer__developers">
+            <span>
+                 designed with great desire <i class="far fa-heart"></i> by Kate <i class="fab fa-instagram"></i>
+                and Michael <i class="fab fa-instagram"></i>
+            </span>
+        </div>
+    </div>
+</footer>
+<script src="javascript/header_popup_menu.js"></script>
+</body>
+</html>

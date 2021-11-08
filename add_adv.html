@@ -14,23 +14,26 @@
 <body>
 <header class="header">
     <div class="header_info">
-        <div class="header_logo">
+        <a href="index.html" class="header_logo">
             <img src="images/header/logo.png" alt="logo">
-        </div>
+        </a>
         <ul class="nav">
             <li class="nav_item">
                 <a href="#" class="nav_item_text">Аренда</a>
             </li>
             <li class="nav_item">
-                <a href="#" class="nav_item_text">Продажа</a>
+                <a href="flats_list.html" class="nav_item_text">Продажа</a>
             </li>
             <li class="nav_item">
-                <a href="#" class="nav_item_text">Ипотека</a>
+                <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
             </li>
         </ul>
     </div>
     <div class="header_buttons">
-        <button class="header_enter_btn">
+        <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+            <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+        </button>
+        <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
             <p class="header_add_adv_text">Войти</p>
         </button>
     </div>
@@ -40,10 +43,10 @@
             <a href="#" class="nav_item_text">Аренда</a>
         </li>
         <li class="popup_nav__item">
-            <a href="#" class="nav_item_text">Продажа</a>
+            <a href="flats_list.html" class="nav_item_text">Продажа</a>
         </li>
         <li class="popup_nav__item">
-            <a href="#" class="nav_item_text">Ипотека</a>
+            <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
         </li>
     </ul>
 </header>

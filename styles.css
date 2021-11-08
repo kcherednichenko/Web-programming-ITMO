@@ -246,6 +246,7 @@ select {
 }
 
 .header_logo {
+    cursor: pointer;
     max-width: 100px;
     max-height: 100px;
     background-color: #90C6B2;

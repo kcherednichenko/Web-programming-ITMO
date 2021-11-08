@@ -4,8 +4,6 @@ body {
     font-size: 20px;
     max-width: 1800px;
     margin: 0 auto;
-    max-width: 1800px;
-    margin: 0 auto;
 }
 
 *, ::after, ::before{
@@ -989,16 +987,12 @@ footer {
 }
 
 .fa-heart {
-
-.fa-heart {
     color: #e81818;
 }
 
 .fa-instagram {
     font-weight: 400;
     padding: 2px 3px;
-
-.fa-instagram {
     cursor: pointer;
     border-radius: 5px;
     color: white;

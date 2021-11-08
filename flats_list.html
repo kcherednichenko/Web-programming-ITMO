@@ -13,28 +13,38 @@
 <body>
 <header class="header">
     <div class="header_info">
-        <div class="header_logo">logo</div>
+        <div class="header_logo">
+            <img src="images/header/logo.png" alt="logo">
+        </div>
         <ul class="nav">
             <li class="nav_item">
-                <div class="nav_item_text">Аренда</div>
+                <a href="#" class="nav_item_text">Аренда</a>
             </li>
             <li class="nav_item">
-                <div class="nav_item_text">Продажа</div>
+                <a href="#" class="nav_item_text">Продажа</a>
             </li>
             <li class="nav_item">
-                <div class="nav_item_text">Ипотека</div>
+                <a href="#" class="nav_item_text">Ипотека</a>
             </li>
         </ul>
     </div>
     <div class="header_buttons">
-        <button class="header_add_adv_btn">
-            <p class="header_add_adv_text">+ Добавить объявление</p>
-        </button>
         <button class="header_enter_btn">
             <p class="header_add_adv_text">Войти</p>
         </button>
     </div>
-
+    <button class="menu-toggle" id="menu-toggle">Menu</button>
+    <ul class="popup_nav" id="popup_nav">
+        <li class="popup_nav__item">
+            <a href="#" class="nav_item_text">Аренда</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="#" class="nav_item_text">Продажа</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="#" class="nav_item_text">Ипотека</a>
+        </li>
+    </ul>
 </header>
 <p class="search_result">
     Купить 2-комнатную квартиру

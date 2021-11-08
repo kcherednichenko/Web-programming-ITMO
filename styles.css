@@ -138,7 +138,7 @@ button {
 }
 
 select {
-    background-color: #298F6B;
+    /*background-color: #298F6B;*/
     border-radius: 15px;
     border: none;
     font-size: 20px;
@@ -493,6 +493,9 @@ by_button {
     width: 612px;
     height: 210px;
     background-color: #298F6B;
+
+}
+
 /*main-page*/
 
 .main__page{
@@ -961,6 +964,53 @@ by_button {
     padding: 10px;
     margin: 7px;
 }
+.log__page__content span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.log__page__input{
+    margin-top: 10px;
+    margin-bottom: 14px;
+    height: 60px;
+    width: 320px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 0;
+}
+.log__page__input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+.log__page__btn{
+    height: 50px;
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #298F6B;
+    margin-bottom: 32px;
+}
+.log__page__content a{
+    color: #298F6B;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.log__page__social{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.social_item{
+    margin-left: 37px;
+}
+.social_item:first-child {
+    margin-left: 0;
+}
 
 /*footer*/
 
@@ -1188,50 +1238,5 @@ footer {
     .show-number-button{
         margin-bottom: 20px;
     }
-.log__page__content span{
-    font-size: 20px;
-    font-weight: bold;
-}
-.log__page__input{
-    margin-top: 10px;
-    margin-bottom: 14px;
-    height: 60px;
-    width: 320px;
-    border-radius: 20px;
-    font-size: 20px;
-    padding: 0;
-}
-.log__page__input::placeholder{
-    color: black;
-    font-weight: bold;
-}
-.log__page__btn{
-    height: 50px;
-    width: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    border: 0;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #298F6B;
-    margin-bottom: 32px;
-}
-.log__page__content a{
-    color: #298F6B;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-.log__page__social{
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
-.social_item{
-    margin-left: 37px;
-}
-.social_item:first-child{
-    margin-left: 0;
+
 }

@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="header">
     <div class="header_info">
-        <div class="header_logo">logo</div>
+        <div class="header_logo">
+            <picture>
+                <img src="images/initial_images/logo.jpg" alt="logo">
+            </picture>
+        </div>
         <ul class="nav">
             <li class="nav_item">
                 <div class="nav_item_text">Аренда</div>
@@ -35,21 +38,31 @@
             <p class="header_add_adv_text">Войти</p>
         </button>
     </div>
+
 </header>
-<main>
-    <div class="mortgage">
-        <img class="mortgage_background" src="/images/mortgage/mortgage-background.jpg" alt="background-1">
-        <div class="mortgage__inner">
-            <div class="mortgage__text">
-                УЗНАЙТЕ КАКИЕ ПРЕДЛОЖЕНИЯ ДОСТУПНЫ ВАМ ПРЯМО СЕЙЧАС!
-                ПРОСТО ВВЕДИТЕ СКОЛЬКО ВЫ ГОТОВЫ ОТКЛАДЫВАТЬ НА ВАШЕ СЧАСТЛИВОЕ БУДУЩЕЕ
-            </div>
-            <button class="mortgage__button">
-                1 200 000
-            </button>
-        </div>
+
+<div class="log__page">
+    <div class="log__page__content">
+        <span>Вход и регистрация</span>
+        <input class="log__page__input" type="text" name="log" placeholder="Email или ID">
+        <button class="log__page__btn">
+            <p class="log__page__txt">Продолжить</p>
+        </button>
+        <a>Войти через соц. сети</a>
+        <ul class="log__page__social">
+            <li class="social_item">
+                    <a href="#"><img src="images/log_images/vk.svg" alt="vk"></a>
+            </li>
+            <li class="social_item">
+                <a href="#"><img src="images/log_images/telegram.svg" alt="telegram"></a>
+            </li>
+            <li class="social_item">
+                <a href="#"><img src="images/log_images/fb.svg" alt="facebook"></a>
+            </li>
+        </ul>
     </div>
-</main>
+</div>
+
 <footer>
     <div class="footer-inner">
         <div class="footer__copyright">
@@ -58,7 +71,7 @@
         <div class="footer__developers">
             <span>
                  designed with great desire <i class="far fa-heart"></i> by Kate <i class="fab fa-instagram"></i>
-                and Michael <i class="fab fa-instagram"></i>
+                and Michael <i class="fab fa-instagram"></i> and freaking god <i class="fab fa-instagram"></i>
             </span>
         </div>
     </div>

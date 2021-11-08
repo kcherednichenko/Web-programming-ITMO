@@ -10,13 +10,18 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+
 <header class="header">
     <div class="header_info">
-        <div class="header_logo">logo</div>
+        <div class="header_logo">
+            <picture>
+                <img src="images/initial_images/logo.jpg" alt="logo">
+            </picture>
+        </div>
         <ul class="nav">
             <li class="nav_item">
                 <div class="nav_item_text">Аренда</div>
-                </li>
+            </li>
             <li class="nav_item">
                 <div class="nav_item_text">Продажа</div>
             </li>
@@ -35,6 +40,55 @@
     </div>
 
 </header>
+
+<div class="main__page">
+    <div class="main__page__image">
+        <picture>
+            <img src="images/initial_images/home.jpg" alt="daaamn house">
+        </picture>
+    </div>
+    <div class="main__page__choice">
+       <ul class="main__page__buy__rent">
+           <li><a href="">Купить</a></li>
+           <li><a href="">Снять</a></li>
+       </ul>
+       <ul class="main__page__options">
+           <li>
+               <select class="main__page__options__select" size="1">
+                   <option>Квартира</option>
+                   <option>Дом</option>
+               </select>
+           </li>
+           <li>
+               <select class="main__page__options__rooms" size="1">
+                   <option>Комнаты</option>
+                   <option>Cтудия</option>
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3+</option>
+               </select>
+           </li>
+           <li>
+               <select class="main__page__options__price" size="1">
+                   <option>Цена</option>
+                   <option>До 2млн</option>
+                   <option>От 2млн до 4млн</option>
+                   <option>От 4млн до 6млн</option>
+                   <option>От 6 млн</option>
+               </select>
+           </li>
+           <li>
+               <input class="main__page__options__address" type="text" name="address" placeholder="Адрес">
+           </li>
+       </ul>
+        <div class="main__page__options__search">
+            <button class="main__page__options__search__btn">
+                <p class="main__page__options__search__txt">Найти</p>
+            </button>
+        </div>
+    </div>
+
+</div>
 <footer>
     <div class="footer-inner">
         <div class="footer__copyright">
@@ -43,7 +97,7 @@
         <div class="footer__developers">
             <span>
                  designed with great desire <i class="far fa-heart"></i> by Kate <i class="fab fa-instagram"></i>
-                and Michael <i class="fab fa-instagram"></i>
+                and Michael <i class="fab fa-instagram"></i> and freaking god <i class="fab fa-instagram"></i>
             </span>
         </div>
     </div>

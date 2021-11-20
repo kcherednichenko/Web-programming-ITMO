@@ -1,5 +1,5 @@
 // Slide-show for second flat
-var slideIndex2 = 1;
+let slideIndex2 = 1;
 showSlides2(slideIndex2);
 
 // Next/previous controls
@@ -8,9 +8,9 @@ function plusSlides2(n) {
 }
 
 function showSlides2(n) {
-    var i;
-    var slides2 = document.getElementsByClassName("mySlides2");
-    var dots = document.getElementsByClassName("dot2");
+    let i;
+    const slides2 = document.getElementsByClassName("mySlides2");
+    const dots = document.getElementsByClassName("dot2");
     if (n > slides2.length) {slideIndex2 = 1}
     if (n < 1) {slideIndex2 = slides2.length}
     for (i = 0; i < slides2.length; i++) {

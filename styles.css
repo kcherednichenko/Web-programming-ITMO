@@ -10,9 +10,13 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .flat_page {
     background-color: #FFFFFF;
-    display: flex;
     margin: 50px 25px;
     padding: 20px 20px 20px 20px;
 }
@@ -29,16 +33,17 @@ body {
 
 .description {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .additional_info {
-    font-size: 10px;
+    font-size: 15px;
     margin-right: 20px;
 }
 
 .price_per_meter {
-    font-size: 8px;
+    font-size: 15px;
 }
 
 .flat_price {
@@ -233,6 +238,14 @@ select {
 
 .flat_page__price__views_and_price__price {
     font-size: 20px;
+}
+
+.flat_page__inner {
+    display: flex;
+}
+
+.flat_page__description {
+    display: none;
 }
 
 /*add_adv*/
@@ -1094,11 +1107,6 @@ footer {
     padding: 0 0 0 200px;
 }
 
-.big_image {
-    width: 360px;
-    height: 209px;
-}
-
 .flat_page__info__images {
     margin-left: 5px;
 }
@@ -1284,6 +1292,21 @@ footer {
 }
 
 
+@media screen and (max-width: 1145px) {
+    .flat_page__description {
+        display: block;
+    }
+
+    .flat_page__full_description {
+        display: none;
+    }
+
+    .phone_number {
+        margin-bottom: 10px;
+    }
+}
+
+
 @media screen and (max-width: 990px) {
 
     /*add adv*/
@@ -1352,6 +1375,26 @@ footer {
         left: 35%;
         top: 55%;
     }
+
+    .flat_page__inner {
+        flex-direction: column;
+    }
+
+    .small_images {
+        display: none;
+    }
+
+    .images {
+        margin: 0;
+    }
+
+    .info {
+        margin: 0;
+    }
+
+    .info__without_full_description {
+        justify-content: unset;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -1409,6 +1452,27 @@ footer {
         left: 40%;
         font-size: 50px;
     }
+
+    .flat_page__info__image {
+        height: 100%;
+        width: 100%;
+    }
+
+    .small_images {
+        display: none;
+    }
+
+    .background_for_results {
+        margin: 0;
+    }
+
+    .images {
+        margin: 0;
+    }
+
+    .info {
+        margin: 0 auto;
+    }
 }
 
 
@@ -1457,6 +1521,14 @@ footer {
 
     .show-number-button {
         margin-bottom: 20px;
+    }
+
+    .info__name__inner {
+        font-size: 23px;
+    }
+
+    .search_result {
+        padding-left: 30px;
     }
 
 }

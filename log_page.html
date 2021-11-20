@@ -10,7 +10,6 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-
 <header class="header">
     <div class="header_info">
         <a href="index.html" class="header_logo">
@@ -18,7 +17,7 @@
         </a>
         <ul class="nav">
             <li class="nav_item">
-                <a href="#" class="nav_item_text">Аренда</a>
+                <a href="flats_list.html" class="nav_item_text">Аренда</a>
             </li>
             <li class="nav_item">
                 <a href="flats_list.html" class="nav_item_text">Продажа</a>
@@ -39,14 +38,22 @@
     <button class="menu-toggle" id="menu-toggle">Menu</button>
     <ul class="popup_nav" id="popup_nav">
         <li class="popup_nav__item">
-            <a href="#" class="nav_item_text">Аренда</a>
+            <a href="flats_list.html" class="popup-nav_item_text">Аренда</a>
         </li>
         <li class="popup_nav__item">
-            <a href="flats_list.html" class="nav_item_text">Продажа</a>
+            <a href="flats_list.html" class="popup-nav_item_text">Продажа</a>
         </li>
         <li class="popup_nav__item">
-            <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
+            <a href="mortgage_find.html" class="popup-nav_item_text">Ипотека</a>
         </li>
+        <div class="header_buttons active_button">
+            <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+                <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+            </button>
+            <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+                <p class="header_add_adv_text">Войти</p>
+            </button>
+        </div>
     </ul>
 </header>
 

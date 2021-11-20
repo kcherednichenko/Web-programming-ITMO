@@ -6,7 +6,7 @@ body {
     margin: 0 auto;
 }
 
-*, ::after, ::before{
+*, ::after, ::before {
     box-sizing: border-box;
 }
 
@@ -124,14 +124,16 @@ select {
     justify-content: space-between;
     align-items: center;
 }
-.header_buttons{
+
+.header_buttons {
     display: flex;
 }
-.header_add_adv_btn{
+
+.header_add_adv_btn {
     width: auto;
 }
 
-.menu-toggle{
+.menu-toggle {
     display: none;
     position: relative;
     width: 30px;
@@ -146,6 +148,7 @@ select {
     border-radius: unset;
     margin-right: 10px;
 }
+
 .menu-toggle:before, .menu-toggle:after {
     content: '';
     display: block;
@@ -164,6 +167,7 @@ select {
     transform: translate(-50%, -50%) rotate(
             45deg);
 }
+
 .menu-toggle.is-active:after {
     -webkit-transform: translate(-50%, -50%) rotate(
             -45deg);
@@ -172,7 +176,7 @@ select {
 }
 
 /*popup*/
-.popup_nav{
+.popup_nav {
     display: none;
     padding: 0;
     margin: 0;
@@ -182,11 +186,12 @@ select {
     text-align: center;
     top: 100px;
     z-index: 3;
-    background-image: linear-gradient(45deg, #90C6B2 0%,#85FFBD, #298F6B 100%);
+    background-image: linear-gradient(45deg, #90C6B2 0%, #85FFBD, #298F6B 100%);
 }
-.popup_nav__item{
+
+.popup_nav__item {
     border-bottom: white 2px solid;
-    padding: 5px 0 ;
+    padding: 5px 0;
 }
 
 .background_for_one_flat_page {
@@ -421,6 +426,7 @@ select {
     font-weight: bold;
     padding-left: 10px;
 }
+
 .object_parameter_input--large {
     width: 60%
 }
@@ -453,21 +459,24 @@ select {
 
 /*main-page*/
 
-.main__page{
+.main__page {
     /*text-align: center;*/
     margin-bottom: 57px;
 
 }
-.main__page__image{
+
+.main__page__image {
     width: 100%;
     height: 730px;
     overflow: hidden;
     position: relative;
 }
-.main__page__image picture img{
+
+.main__page__image picture img {
     filter: brightness(60%);
 }
-.main__page__choice{
+
+.main__page__choice {
     display: block;
     width: 240px;
     height: 50px;
@@ -475,6 +484,7 @@ select {
     top: 365px;
     left: 377px;
 }
+
 .main__page__buy__rent {
     margin: 0;
     list-style: none;
@@ -484,32 +494,38 @@ select {
     padding-left: 0;
     font-size: 20px;
 }
-.main__page__buy__rent li{
+
+.main__page__buy__rent li {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 120px;
     height: 100%;
 }
-.main__page__buy__rent li:first-child a:visited{
+
+.main__page__buy__rent li:first-child a:visited {
     color: black;
     text-decoration: none;
 }
-.main__page__buy__rent li:first-child{
+
+.main__page__buy__rent li:first-child {
     background-color: #90C6B2;
     border-radius: 20px 0 0 0;
 }
-.main__page__buy__rent li:last-child{
+
+.main__page__buy__rent li:last-child {
     color: white;
     background-color: black;
     opacity: 0.6;
     border-radius: 0 20px 0 0;
 }
-.main__page__buy__rent li:last-child a:visited{
-    color:white;
+
+.main__page__buy__rent li:last-child a:visited {
+    color: white;
     text-decoration: none;
 }
-.main__page__options{
+
+.main__page__options {
     display: flex;
     position: absolute;
     width: 1166px;
@@ -519,7 +535,8 @@ select {
     list-style: none;
     font-size: 20px;
 }
-.main__page__options li{
+
+.main__page__options li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -528,41 +545,49 @@ select {
     background-color: white;
     border: 1px black;
 }
-.main__page__options li:first-child{
+
+.main__page__options li:first-child {
     border-radius: 0 0 0 20px;
 }
-.main__page__options__select{
+
+.main__page__options__select {
     display: block;
     font-size: 20px;
     font-weight: bold;
     border: 0;
 }
-.main__page__options__rooms{
+
+.main__page__options__rooms {
     display: block;
     font-size: 20px;
     font-weight: bold;
     border: 0;
 }
-.main__page__options__price{
+
+.main__page__options__price {
     display: block;
     font-size: 20px;
     font-weight: bold;
     border: 0;
 }
-.main__page__options__address{
+
+.main__page__options__address {
     display: block;
     font-size: 20px;
     font-weight: bold;
     border: 0;
 }
-.main__page__options__address::placeholder{
+
+.main__page__options__address::placeholder {
     color: black;
 }
-.main__page__options li:last-child{
+
+.main__page__options li:last-child {
     width: 566px;
     border-radius: 0 20px 20px 0;
 }
-.main__page__options__search{
+
+.main__page__options__search {
     display: block;
     position: absolute;
     width: 200px;
@@ -572,7 +597,8 @@ select {
     left: 966px;
 
 }
-.main__page__options__search__btn{
+
+.main__page__options__search__btn {
     width: 200px;
     height: 75px;
     border-radius: 20px;
@@ -581,8 +607,9 @@ select {
     font-size: 20px;
     font-weight: bold;
 }
+
 /*log-page*/
-.log__page{
+.log__page {
     width: 1920px;
     height: 1080px;
     display: flex;
@@ -590,7 +617,8 @@ select {
     align-items: center;
 
 }
-.log__page__content{
+
+.log__page__content {
     height: 600px;
     width: 500px;
     display: flex;
@@ -668,9 +696,11 @@ select {
 .advertisement__item:hover .side-panel-image {
     opacity: 0.3;
 }
+
 .advertisement__item:hover .side-panel-info__header {
     opacity: 1;
 }
+
 .advertisement__item:hover .side-panel-links {
     opacity: 1;
 }
@@ -712,7 +742,8 @@ select {
     flex-direction: column;
     align-items: center;
 }
-.mortgage_background{
+
+.mortgage_background {
     max-width: 1730px;
     width: 100%;
     height: 100%;
@@ -744,7 +775,8 @@ select {
     align-items: baseline;
 
 }
-.filters__inner{
+
+.filters__inner {
     display: flex;
     flex-wrap: wrap;
 }
@@ -784,7 +816,8 @@ select {
     margin-top: 30px;
     max-width: 1600px;
 }
-.mortgage-list__image{
+
+.mortgage-list__image {
     height: 100%;
     object-fit: cover;
 }
@@ -923,11 +956,13 @@ select {
     margin: 7px;
     font-size: 15px;
 }
-.log__page__content span{
+
+.log__page__content span {
     font-size: 20px;
     font-weight: bold;
 }
-.log__page__input{
+
+.log__page__input {
     margin-top: 10px;
     margin-bottom: 14px;
     height: 60px;
@@ -936,11 +971,13 @@ select {
     font-size: 20px;
     padding: 0;
 }
-.log__page__input::placeholder{
+
+.log__page__input::placeholder {
     color: black;
     font-weight: bold;
 }
-.log__page__btn{
+
+.log__page__btn {
     height: 50px;
     width: 190px;
     display: flex;
@@ -953,20 +990,24 @@ select {
     background-color: #298F6B;
     margin-bottom: 32px;
 }
-.log__page__content a{
+
+.log__page__content a {
     color: #298F6B;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 18px;
 }
-.log__page__social{
+
+.log__page__social {
     list-style: none;
     display: flex;
     padding: 0;
 }
-.social_item{
+
+.social_item {
     margin-left: 37px;
 }
+
 .social_item:first-child {
     margin-left: 0;
 }
@@ -1014,6 +1055,7 @@ footer {
 .flat_page__info__full_description {
     margin-left: 5px;
 }
+
 .flat_page__info__full_description__text {
     font-weight: 10;
 }
@@ -1061,7 +1103,9 @@ footer {
     margin-left: 5px;
 }
 
-* {box-sizing:border-box}
+* {
+    box-sizing: border-box
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -1101,7 +1145,7 @@ footer {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -1160,13 +1204,21 @@ footer {
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @media screen and (max-width: 1400px) {
@@ -1178,7 +1230,8 @@ footer {
     .add_adv_photo_field {
         width: 500px;
     }
-    .object_parameter_input--large{
+
+    .object_parameter_input--large {
         margin-right: 10px;
     }
 
@@ -1186,9 +1239,10 @@ footer {
 
 @media screen and (max-width: 1200px) {
     /*header*/
-    .nav_item{
+    .nav_item {
         width: 125px;
     }
+
     main {
         margin: 30px;
     }
@@ -1197,28 +1251,34 @@ footer {
     .add-adv__info__item {
         margin-left: 25px;
     }
-    .add-adv__parameter{
+
+    .add-adv__parameter {
         display: block;
     }
-    .add-adv__parameter__text{
+
+    .add-adv__parameter__text {
         margin-bottom: 10px;
     }
+
     /*advertisement*/
-    .side-panel-info__header{
+    .side-panel-info__header {
         font-size: 18px;
     }
 
     /*mortgage*/
-    .mortgage-list__title{
+    .mortgage-list__title {
         font-size: 36px;
     }
-    .mortgage-list__item{
+
+    .mortgage-list__item {
         margin-right: 30px;
     }
-    .mortgage-list{
+
+    .mortgage-list {
         margin-left: 30px;
     }
-    .mortgage-list__image{
+
+    .mortgage-list__image {
         width: 50%;
     }
 }
@@ -1227,56 +1287,68 @@ footer {
 @media screen and (max-width: 990px) {
 
     /*add adv*/
-    .add-adv__header{
+    .add-adv__header {
         font-size: 28px;
     }
-    .advertisement-title{
+
+    .advertisement-title {
         font-size: 28px;
     }
-    .add-adv__option{
+
+    .add-adv__option {
         font-size: 16px;
     }
-    .content{
+
+    .content {
         display: block;
     }
-    .add-adv{
+
+    .add-adv {
         width: 100%;
     }
+
     /*mortgage*/
-    .mortgage-list__title{
+    .mortgage-list__title {
         font-size: 30px;
     }
+
     .mortgage-list__item {
         display: block;
         text-align: center;
     }
-    .mortgage-list__image{
+
+    .mortgage-list__image {
         width: 100%;
         height: 100%;
     }
-    .mortgage-list__buttons{
+
+    .mortgage-list__buttons {
         justify-content: center;
     }
 
     /*advertisement*/
-    .advertisement-title{
+    .advertisement-title {
         margin-top: 30px;
         margin-bottom: 15px;
     }
-    .advertisement-inner{
+
+    .advertisement-inner {
         display: flex;
         flex-wrap: wrap;
     }
-    .advertisement__item{
+
+    .advertisement__item {
         width: 45%;
         margin-right: 15px;
     }
-    .side-panel-info__header{
+
+    .side-panel-info__header {
         font-size: 18px;
         top: 15%;
         left: 10%;
     }
-    .side-panel-links{
+
+    .side-panel-links {
         left: 35%;
         top: 55%;
     }
@@ -1284,48 +1356,56 @@ footer {
 
 @media screen and (max-width: 770px) {
     /*header*/
-    .nav_item{
+    .nav_item {
         width: 100px;
     }
-    .header_add_adv_text{
+
+    .header_add_adv_text {
         font-size: 15px;
     }
 
     /*add adv*/
-    .add-adv{
+    .add-adv {
         padding-right: 0;
     }
+
     /*navigation*/
-    .header{
+    .header {
     }
-    .nav{
+
+    .nav {
         display: none;
     }
-    .header_buttons{
+
+    .header_buttons {
         margin-left: auto;
     }
-    .menu-toggle{
+
+    .menu-toggle {
         display: block;
     }
 
     /*.mortgage*/
-    .filters{
+    .filters {
         display: block;
     }
-    .page-title{
+
+    .page-title {
         margin-left: 50px;
     }
 
-     /*advertisement */
-    .advertisement__item{
+    /*advertisement */
+    .advertisement__item {
         width: 90%;
         padding: 0;
         border-radius: 30px;
     }
-    .side-panel-info__header{
+
+    .side-panel-info__header {
         font-size: 26px;
     }
-    .side-panel-links{
+
+    .side-panel-links {
         left: 40%;
         font-size: 50px;
     }
@@ -1334,39 +1414,48 @@ footer {
 
 @media screen and (max-width: 550px) {
     /*header*/
-    .header_add_adv_text{
+    .header_add_adv_text {
         font-size: 12px;
     }
+
     /*add adv*/
-    main{
+    main {
         margin: 0;
     }
-    .add-adv__info__item{
+
+    .add-adv__info__item {
         display: block;
     }
-    .add-adv__info__item button{
+
+    .add-adv__info__item button {
         margin: 10px auto;
 
     }
-    .add_adv_photo_field{
+
+    .add_adv_photo_field {
         width: 90%;
         margin: 0;
     }
-    .object_parameter_input_description{
+
+    .object_parameter_input_description {
         width: 90%;
     }
+
     /*advertisement*/
-    .side-panel-info__header{
+    .side-panel-info__header {
         font-size: 20px;
     }
-    .side-panel-links{
+
+    .side-panel-links {
         font-size: 40px;
     }
+
     /*mortgage*/
-    .mortgage-list__buttons{
+    .mortgage-list__buttons {
         display: block;
     }
-    .show-number-button{
+
+    .show-number-button {
         margin-bottom: 20px;
     }
 

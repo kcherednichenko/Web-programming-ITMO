@@ -1,15 +1,24 @@
-let options = document.getElementsByClassName("add-adv__option");
+let options = document.getElementsByClassName("add-adv__option")
+let objectTypeOptions = document.getElementsByClassName("object-options__item")
 
-
-for (let i = 0; i < options.length; i++) {
-    options[i].addEventListener('click', function (event){
-        let elementsInDiv =  options[i].parentElement.children
-        Array.from(elementsInDiv).forEach(function (el){
-            if (el.classList.contains('active')){
-                el.classList.remove('active')
+const add_active_class = function (objects, classname) {
+    for (let i = 0; i < objects.length; i++) {
+        objects[i].addEventListener('click', function (event) {
+            event.preventDefault()
+            if (objects[i].classList.contains(classname)) {
+                objects[i].classList.remove(classname)
+            } else {
+                let elementsInDiv = objects[i].parentElement.children
+                Array.from(elementsInDiv).forEach(function (el) {
+                    if (el.classList.contains(classname)) {
+                        el.classList.remove(classname)
+                    }
+                })
+                objects[i].classList.add(classname)
             }
-        })
-        event.preventDefault()
-        options[i].classList.add('active')
-    });
+        });
+    }
 }
+
+add_active_class(options, 'active')
+add_active_class(objectTypeOptions, 'active_object')

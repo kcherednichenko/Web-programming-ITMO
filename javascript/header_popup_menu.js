@@ -6,12 +6,12 @@ menuToggle.addEventListener('click', function (e){
         menuToggle.classList.remove('is-active')
         menuToggle.style.borderBottom = "2px solid"
         menuToggle.style.borderTop = "2px solid"
-        popupNav.style.display = 'none'
+        popupNav.style.transform = 'translate(100% ,0)'
     }
     else {
         menuToggle.classList.add("is-active")
         menuToggle.style.border = "0"
-        popupNav.style.display = 'block'
+        popupNav.style.transform = 'none'
     }
 })
 window.addEventListener('resize', function () {

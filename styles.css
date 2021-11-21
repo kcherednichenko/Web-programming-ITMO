@@ -110,6 +110,7 @@ button {
     font-size: 20px;
     font-weight: lighter;
     cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 }
 
 select {
@@ -131,6 +132,7 @@ select {
     margin-left: 5px;
     font-weight: bold;
     margin-right: 10px;
+    height: 40px;
 }
 
 /*header*/
@@ -379,12 +381,16 @@ select {
     margin-bottom: 20px;
     margin-left: 50px;
 }
+.add-adv__info__item--block{
+    display: block;
+}
 
 .add-adv__form__title {
     font-weight: 300;
     width: 225px;
     height: 40px;
 }
+
 
 .add-adv__option {
     font-size: 20px;
@@ -462,7 +468,7 @@ select {
 }
 
 .object_parameter_input--large {
-    width: 60%
+   width: 90%;
 }
 
 .furniture_buttons .add-adv__option {
@@ -485,7 +491,6 @@ select {
 
 
 .add_adv_photo_field {
-    width: 612px;
     height: 210px;
     background-color: #298F6B;
     position: relative;
@@ -673,7 +678,6 @@ select {
 }
 
 .object_parameter_input_description {
-    width: 575px;
     height: 150px;
     text-align: justify;
 }
@@ -1273,7 +1277,6 @@ footer {
 
     /*add adv*/
     .add_adv_photo_field {
-        width: 500px;
     }
 
     .object_parameter_input--large {
@@ -1399,6 +1402,7 @@ footer {
 
     .menu-toggle {
         display: block;
+        box-shadow: none;
     }
 
 
@@ -1468,7 +1472,10 @@ footer {
         left: 35%;
         top: 55%;
     }
-
+    /*footer*/
+    footer{
+        font-size: 18px;
+    }
     .flat_page__inner {
         flex-direction: column;
     }
@@ -1544,6 +1551,11 @@ footer {
         margin-left: 50px;
     }
 
+    /*add-adv*/
+    .add_adv_photo__inner{
+        top: 10%;
+        left: 15%
+    }
     /*advertisement */
     .advertisement__item {
         width: 90%;
@@ -1624,10 +1636,21 @@ footer {
     .side-panel-links {
         font-size: 40px;
     }
+    /*footer*/
+    footer{
+        font-size: 10px;
+    }
+    .fa-instagram{
+        padding: 1px 2px;
+        border-radius: 3px;
+    }
 
     /*mortgage*/
     .mortgage-list__buttons {
         display: block;
+    }
+    .mortgage-list{
+        margin-left: 0;
     }
 
     .show-number-button {
@@ -1640,6 +1663,15 @@ footer {
 
     .search_result {
         padding-left: 30px;
+    }
+    .filters{
+        padding-left: 0;
+    }
+    .filter__item{
+        margin-left: 3px;
+    }
+    .filter__value{
+        width: 100px;
     }
 
     .flat_page_info__about_cur_flat_990px__topic {

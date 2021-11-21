@@ -1562,6 +1562,10 @@ footer {
     .info {
         margin: 0 auto;
     }
+
+    .background_for_one_flat_page {
+        margin: 0;
+    }
 }
 
 

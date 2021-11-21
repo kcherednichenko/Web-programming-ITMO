@@ -931,6 +931,14 @@ select {
     padding-right: 5%;
 }
 
+.flat_page_info__tags_and_other {
+    display: none;
+}
+
+.flat_page_info__about_cur_flat_990px {
+    display: none;
+}
+
 .flat_page__tags {
     display: flex;
     flex-wrap: wrap;
@@ -1333,6 +1341,18 @@ footer {
     .phone_number {
         margin-bottom: 10px;
     }
+
+    .flat_page_info__about_cur_flat {
+        margin-top: 55px;
+    }
+
+    .flat_page_info__about_cur_flat {
+        width: 780px;
+    }
+
+    .flat_page__info__full_description__text {
+        font-size: 15px;
+    }
 }
 
 
@@ -1468,6 +1488,49 @@ footer {
     .info__without_full_description {
         justify-content: unset;
     }
+
+    .flat_page__price {
+        display: none;
+    }
+
+    .flat_page_info__tags_and_other {
+        display: inline;
+    }
+
+    .flat_page__info__images {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flat_page__price {
+    }
+
+    .flat_page__info {
+        width: 96%;
+        margin: 2%;
+    }
+
+    .flat_page__price__developer {
+        width: 50%;
+    }
+
+    .flat_page_info__about_cur_flat_990px {
+        display: inline;
+    }
+
+    .flat_page_info__about_cur_flat {
+        display: none;
+    }
+
+    .flat_page_info__about_cur_flat_990px__topic {
+        margin: 10px 0 0 5px;
+    }
+
+    .flat_page_info__about_cur_flat_990px__characteristics {
+        font-size: 15px;
+        margin: -5px 0 0 5px;
+        font-weight: 10;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -1516,6 +1579,10 @@ footer {
 
     .info {
         margin: 0 auto;
+    }
+
+    .background_for_one_flat_page {
+        margin: 0;
     }
 }
 
@@ -1573,6 +1640,10 @@ footer {
 
     .search_result {
         padding-left: 30px;
+    }
+
+    .flat_page_info__about_cur_flat_990px__topic {
+        font-size: 14px;
     }
 
 }

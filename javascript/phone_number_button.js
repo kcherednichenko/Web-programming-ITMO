@@ -11,3 +11,4 @@ function showPhoneNumber(phoneNumber, classId) {
 showPhoneNumber("+7(921)100-00-01", "phone_number_1")
 showPhoneNumber("+7(921)100-00-02", "phone_number_2")
 showPhoneNumber("Показать телефон +7(921)100-00-03", "phone_number_3")
+showPhoneNumber("Показать телефон +7(921)100-00-03", "phone_number_4")

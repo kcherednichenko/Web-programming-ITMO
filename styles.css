@@ -122,6 +122,16 @@ select {
     font-weight: bold;
     margin-right: 10px;
 }
+.price{
+    background-color: #298F6B;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
 
 /*header*/
 .header {
@@ -293,7 +303,6 @@ select {
 .popup-nav_item_text{
     text-decoration: none;
     color: white;
-    padding-top: 40px;
     font-size: 36px;
     font-weight: lighter;
 }
@@ -479,7 +488,7 @@ select {
     width: 612px;
     height: 210px;
     background-color: #298F6B;
-
+    position: relative;
 }
 
 /*main-page*/
@@ -688,7 +697,15 @@ select {
     background-color: black;
     color: white;
 }
-
+.add_adv_photo__inner{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    text-align: center;
+}
+.add-photo__input{
+    display: none;
+}
 /*advertisement*/
 .advertisement {
 }
@@ -1320,6 +1337,50 @@ footer {
 
 
 @media screen and (max-width: 990px) {
+    /*header*/
+    .nav_item {
+        width: 100px;
+    }
+
+    .header_add_adv_text {
+        font-size: 15px;
+    }
+
+    /*add adv*/
+    .add-adv {
+        padding-right: 0;
+    }
+
+    /*navigation*/
+    .header {
+    }
+
+    .nav {
+        display: none;
+    }
+    .header .header_buttons{
+        display: none;
+    }
+    .header_buttons.active_button{
+        display: flex;
+    }
+
+    .header_buttons {
+        margin-left: auto;
+        flex-direction: column;
+    }
+    .header_add_adv_btn{
+        width: 250px;
+        margin: 20px auto;
+    }
+    .header_enter_btn{
+        margin: 0 auto;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
 
     /*add adv*/
     .add-adv__header {
@@ -1410,49 +1471,6 @@ footer {
 }
 
 @media screen and (max-width: 770px) {
-    /*header*/
-    .nav_item {
-        width: 100px;
-    }
-
-    .header_add_adv_text {
-        font-size: 15px;
-    }
-
-    /*add adv*/
-    .add-adv {
-        padding-right: 0;
-    }
-
-    /*navigation*/
-    .header {
-    }
-
-    .nav {
-        display: none;
-    }
-    .header .header_buttons{
-        display: none;
-    }
-    .header_buttons.active_button{
-        display: flex;
-    }
-
-    .header_buttons {
-        margin-left: auto;
-        flex-direction: column;
-    }
-    .header_add_adv_btn{
-        width: 30%;
-        margin: 20px auto;
-    }
-    .header_enter_btn{
-        margin: 0 auto;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
 
     /*.mortgage*/
     .filters {

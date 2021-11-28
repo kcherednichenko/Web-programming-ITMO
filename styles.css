@@ -57,6 +57,9 @@ a {
     border-radius: 20px;
     color: #FFFFFF;
     padding: 10px;
+    display: inline-block;
+    background-color: #298F6B;
+    font-size: 20px;
 }
 
 .favourites {
@@ -978,6 +981,7 @@ select {
     padding: 10px;
     margin: 7px;
     font-size: 15px;
+    display: inline-block;
 }
 
 .flat_page__tags__favourites {

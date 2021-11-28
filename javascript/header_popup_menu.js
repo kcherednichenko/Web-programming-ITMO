@@ -15,7 +15,10 @@ menuToggle.addEventListener('click', function (e){
     }
 })
 window.addEventListener('resize', function () {
-    if (window.innerWidth > 770){
+    if (window.innerWidth > 990){
         popupNav.style.display = 'none'
+    }
+    else {
+        popupNav.style.display = 'block'
     }
 })

@@ -98,22 +98,22 @@
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Количество помещений</div>
                                 <input type="number" name="room_number"
-                                       class="object_parameter_input object_parameter_input--large">
+                                       class="object_parameter_input">
                             </div>
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Площадь (кв. м.)</div>
                                 <input type="number" name="area"
-                                       class="object_parameter_input object_parameter_input--large">
+                                       class="object_parameter_input">
                             </div>
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Высота ( м.)</div>
                                 <input type="number" name="height"
-                                       class="object_parameter_input object_parameter_input--large">
+                                       class="object_parameter_input">
                             </div>
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Состояние</div>
                                 <input type="text" name="condition"
-                                       class="object_parameter_input object_parameter_input--large">
+                                       class="object_parameter_input">
                             </div>
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Мебель</div>
@@ -124,31 +124,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="add-adv__info__item">
+                    <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Адрес</div>
                         <input type="text" name="location"
                                class="object_parameter_input object_parameter_input--large">
                     </div>
-                    <div class="add-adv__info__item">
+                    <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Фото</div>
                         <div class="add_adv_photo_field object_parameter_input--large">
-                            <i class="fas fa-folder-open"></i>
-                            <div class="upload_photo_description">
-                                Загрузите свое фото сюда...
+                            <div class="add_adv_photo__inner">
+                                <input type="file" id="file" class="add-photo__input">
+                                <label for="file"><i class="fas fa-folder-open"></i></label>
+                                <div class="upload_photo_description">
+                                    Загрузите свое фото сюда...
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="add-adv__info__item">
-                        <div class="add-adv__form__title">Описание</div>
+                    <div class="add-adv__info__item add-adv__info__item--block">
+                        <div class="add-adv__form__title ">Описание</div>
                         <input type="text" name="room_number"
                                class="object_parameter_input object_parameter_input_description object_parameter_input--large">
                     </div>
-                    <div class="add-adv__info__item">
+                    <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Контактный номер</div>
                         <input type="tel" name="contact_number"
-                               class="object_parameter_input object_parameter_input--large">
+                               class="object_parameter_input">
                     </div>
-                    <div class="add-adv__info__item">
+                    <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Цена</div>
                         <input type="number" name="price" class="object_parameter_input">
                         <select name="select_price" class="price">
@@ -157,7 +160,7 @@
                             <option value="MDL">MDL</option>
                         </select>
                     </div>
-                    <div class="add-adv__info__item">
+                    <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Заголовок</div>
                         <input type="text" name="title" class="object_parameter_input object_parameter_input--large">
                     </div>

@@ -113,6 +113,7 @@ button {
     font-size: 20px;
     font-weight: lighter;
     cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 }
 
 select {
@@ -124,6 +125,17 @@ select {
     margin-left: 5px;
     font-weight: bold;
     margin-right: 10px;
+}
+.price{
+    background-color: #298F6B;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+    height: 40px;
 }
 
 /*header*/
@@ -296,7 +308,6 @@ select {
 .popup-nav_item_text{
     text-decoration: none;
     color: white;
-    padding-top: 40px;
     font-size: 36px;
     font-weight: lighter;
 }
@@ -373,12 +384,16 @@ select {
     margin-bottom: 20px;
     margin-left: 50px;
 }
+.add-adv__info__item--block{
+    display: block;
+}
 
 .add-adv__form__title {
     font-weight: 300;
     width: 225px;
     height: 40px;
 }
+
 
 .add-adv__option {
     font-size: 20px;
@@ -456,7 +471,7 @@ select {
 }
 
 .object_parameter_input--large {
-    width: 60%
+   width: 90%;
 }
 
 .furniture_buttons .add-adv__option {
@@ -479,10 +494,9 @@ select {
 
 
 .add_adv_photo_field {
-    width: 612px;
     height: 210px;
     background-color: #298F6B;
-
+    position: relative;
 }
 
 /*main-page*/
@@ -667,7 +681,6 @@ select {
 }
 
 .object_parameter_input_description {
-    width: 575px;
     height: 150px;
     text-align: justify;
 }
@@ -691,7 +704,15 @@ select {
     background-color: black;
     color: white;
 }
-
+.add_adv_photo__inner{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    text-align: center;
+}
+.add-photo__input{
+    display: none;
+}
 /*advertisement*/
 .advertisement {
 }
@@ -1260,7 +1281,6 @@ footer {
 
     /*add adv*/
     .add_adv_photo_field {
-        width: 500px;
     }
 
     .object_parameter_input--large {
@@ -1344,6 +1364,51 @@ footer {
 
 
 @media screen and (max-width: 990px) {
+    /*header*/
+    .nav_item {
+        width: 100px;
+    }
+
+    .header_add_adv_text {
+        font-size: 15px;
+    }
+
+    /*add adv*/
+    .add-adv {
+        padding-right: 0;
+    }
+
+    /*navigation*/
+    .header {
+    }
+
+    .nav {
+        display: none;
+    }
+    .header .header_buttons{
+        display: none;
+    }
+    .header_buttons.active_button{
+        display: flex;
+    }
+
+    .header_buttons {
+        margin-left: auto;
+        flex-direction: column;
+    }
+    .header_add_adv_btn{
+        width: 250px;
+        margin: 20px auto;
+    }
+    .header_enter_btn{
+        margin: 0 auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        box-shadow: none;
+    }
+
 
     /*add adv*/
     .add-adv__header {
@@ -1411,7 +1476,10 @@ footer {
         left: 35%;
         top: 55%;
     }
-
+    /*footer*/
+    footer{
+        font-size: 18px;
+    }
     .flat_page__inner {
         flex-direction: column;
     }
@@ -1477,49 +1545,6 @@ footer {
 }
 
 @media screen and (max-width: 770px) {
-    /*header*/
-    .nav_item {
-        width: 100px;
-    }
-
-    .header_add_adv_text {
-        font-size: 15px;
-    }
-
-    /*add adv*/
-    .add-adv {
-        padding-right: 0;
-    }
-
-    /*navigation*/
-    .header {
-    }
-
-    .nav {
-        display: none;
-    }
-    .header .header_buttons{
-        display: none;
-    }
-    .header_buttons.active_button{
-        display: flex;
-    }
-
-    .header_buttons {
-        margin-left: auto;
-        flex-direction: column;
-    }
-    .header_add_adv_btn{
-        width: 30%;
-        margin: 20px auto;
-    }
-    .header_enter_btn{
-        margin: 0 auto;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
 
     /*.mortgage*/
     .filters {
@@ -1530,6 +1555,11 @@ footer {
         margin-left: 50px;
     }
 
+    /*add-adv*/
+    .add_adv_photo__inner{
+        top: 10%;
+        left: 15%
+    }
     /*advertisement */
     .advertisement__item {
         width: 90%;
@@ -1610,10 +1640,21 @@ footer {
     .side-panel-links {
         font-size: 40px;
     }
+    /*footer*/
+    footer{
+        font-size: 10px;
+    }
+    .fa-instagram{
+        padding: 1px 2px;
+        border-radius: 3px;
+    }
 
     /*mortgage*/
     .mortgage-list__buttons {
         display: block;
+    }
+    .mortgage-list{
+        margin-left: 0;
     }
 
     .show-number-button {
@@ -1626,6 +1667,15 @@ footer {
 
     .search_result {
         padding-left: 30px;
+    }
+    .filters{
+        padding-left: 0;
+    }
+    .filter__item{
+        margin-left: 3px;
+    }
+    .filter__value{
+        width: 100px;
     }
 
     .flat_page_info__about_cur_flat_990px__topic {

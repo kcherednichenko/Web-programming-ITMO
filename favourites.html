@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header_info">
+        <a href="index.html" class="header_logo">
+            <img src="images/header/logo.png" alt="logo">
+        </a>
+        <ul class="nav">
+            <li class="nav_item">
+                <a href="flats_list.html" class="nav_item_text">Аренда</a>
+            </li>
+            <li class="nav_item">
+                <a href="flats_list.html" class="nav_item_text">Продажа</a>
+            </li>
+            <li class="nav_item">
+                <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header_buttons">
+        <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+            <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+        </button>
+        <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+            <p class="header_add_adv_text">Войти</p>
+        </button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">Menu</button>
+    <ul class="popup_nav" id="popup_nav">
+        <li class="popup_nav__item">
+            <a href="flats_list.html" class="popup-nav_item_text">Аренда</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="flats_list.html" class="popup-nav_item_text">Продажа</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="mortgage_find.html" class="popup-nav_item_text">Ипотека</a>
+        </li>
+        <div class="header_buttons active_button">
+            <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+                <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+            </button>
+            <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+                <p class="header_add_adv_text">Войти</p>
+            </button>
+        </div>
+    </ul>
+</header>
+
+<div class="background_for_favourites">
+    <div class="background_for_favourites__page">
+        <div class="background_for_favourites__page__container">
+            <h1 class="background_for_favourites__page__container_header">Добавляйте объявления в&nbsp;"Избранное"</h1>
+            <div class="background_for_favourites__page__container__description">
+                Не&nbsp;пропустите изменения цены в&nbsp;интересных вам предложениях.
+            </div>
+            <a class="background_for_favourites__page__container__button" href="index.html">Начать новый поиск</a>
+        </div>
+        <img class="background_for_favourites__page__image" src="images/favourites_background.svg" alt="">
+    </div>
+</div>
+<footer>
+    <div class="footer-inner">
+        <div class="footer__copyright">
+            Copyright © 2021
+        </div>
+        <div class="footer__developers">
+            <span>
+                 designed with great desire <i class="far fa-heart"></i> by Kate <i class="fab fa-instagram"></i>
+                and Michael <i class="fab fa-instagram"></i>
+            </span>
+        </div>
+    </div>
+</footer>
+<script src="javascript/header_popup_menu.js"></script>
+</body>
+</html>

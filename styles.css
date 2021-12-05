@@ -60,6 +60,7 @@ a {
     display: inline-block;
     background-color: #298F6B;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .favourites {
@@ -68,6 +69,7 @@ a {
     border-radius: 20px;
     background-color: #E5E5E5;
     padding: 10px;
+    transition: all .5s ease-in-out;
 }
 
 .search_result {
@@ -92,7 +94,7 @@ main {
     left: 0;
 }
 
-by_button {
+.flat_page__info__button {
     color: #828181;
     border: none;
     font-size: 12px;
@@ -228,6 +230,7 @@ select {
 .flat_history_buttons_block {
     padding-bottom: 20px;
     margin-left: 5px;
+    display: flex;
 }
 
 .flat_page__price__views_and_price {
@@ -1213,6 +1216,47 @@ footer {
     margin-left: 5px;
 }
 
+.background_for_favourites {
+    background-color: #90C6B2;
+    margin: 15% 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.background_for_favourites__page {
+    display: flex;
+}
+
+.background_for_favourites__page__container {
+    margin-left: 25px;
+}
+
+.background_for_favourites__page__container__button {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    background-color: #EAEE1A;
+    padding: 10px 35px;
+    margin: 30px 0;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.background_for_favourites__page__container__change_account {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    background-color: #E5E5E5;
+    padding: 10px 35px;
+    margin-top: 30px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.background_for_favourites__page__image {
+    height: 222px;
+}
+
 * {
     box-sizing: border-box
 }
@@ -1417,6 +1461,10 @@ footer {
     .flat_page__info__full_description__text {
         font-size: 15px;
     }
+
+    .background_for_favourites__page__container__change_account {
+        margin: 0 0 30px 0;
+    }
 }
 
 
@@ -1605,6 +1653,16 @@ footer {
         margin: -5px 0 0 5px;
         font-weight: 10;
     }
+
+    .background_for_favourites__page {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .background_for_favourites__page__image {
+        width: 380px;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -1663,6 +1721,14 @@ footer {
 
     .background_for_one_flat_page {
         margin: 0;
+    }
+
+    .background_for_favourites {
+        margin: 15% 0;
+    }
+
+    .background_for_favourites__page__container {
+        margin: 0 25px;
     }
 }
 
@@ -1760,4 +1826,7 @@ footer {
         font-size: 14px;
     }
 
+    .background_for_favourites__page__container_header {
+        font-size: 30px;
+    }
 }

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="header_info">
+    <a href="index.html" class="header_logo">
+      <img src="images/header/logo.png" alt="logo">
+    </a>
+    <ul class="nav">
+      <li class="nav_item">
+        <a href="flats_list.html" class="nav_item_text">Аренда</a>
+      </li>
+      <li class="nav_item">
+        <a href="flats_list.html" class="nav_item_text">Продажа</a>
+      </li>
+      <li class="nav_item">
+        <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header_buttons">
+    <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+      <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+    </button>
+    <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+      <p class="header_add_adv_text">Войти</p>
+    </button>
+  </div>
+  <button class="menu-toggle" id="menu-toggle">Menu</button>
+  <ul class="popup_nav" id="popup_nav">
+    <li class="popup_nav__item">
+      <a href="flats_list.html" class="popup-nav_item_text">Аренда</a>
+    </li>
+    <li class="popup_nav__item">
+      <a href="flats_list.html" class="popup-nav_item_text">Продажа</a>
+    </li>
+    <li class="popup_nav__item">
+      <a href="mortgage_find.html" class="popup-nav_item_text">Ипотека</a>
+    </li>
+    <div class="header_buttons active_button">
+      <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+        <p class="header_add_adv_text">+&nbspДобавить&nbspобъявление</p>
+      </button>
+      <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+        <p class="header_add_adv_text">Войти</p>
+      </button>
+    </div>
+  </ul>
+</header>
+
+<p class="search_result">
+  Купить 2-комнатную квартиру
+</p>
+<div class="background_for_one_flat_page">
+  <div class="flat_page__info">
+    <div class="flat_history_buttons_block">
+      <div class="flat_page__info__button">Купить ></div>
+      <div class="flat_page__info__button">&ensp;Квартира ></div>
+      <div class="flat_page__info__button">&ensp;Двухкомнатные</div>
+    </div>
+    <div class="flat_page__info__images">
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img class=flat_page__info__image" src="images/flat_Mohovaya1_817x376.png" style="width:100%" alt="">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img class=flat_page__info__image" src="images/flat_Mohovaya6_817x376..png" style="width:100%" alt="">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img class=flat_page__info__image" src="images/flat_Mohovaya7_817x376..png" style="width:100%" alt="">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img class=flat_page__info__image" src="images/flat_Mohovaya8_817x376.png" style="width:100%" alt="">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img class=flat_page__info__image" src="images/flat_Mohovaya9_817x376..png" style="width:100%" alt="">
+        </div>
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <div class="flat_page_info__tags_and_other">
+      <div class="flat_page__price__views_and_price">
+        <p class="flat_page__price__views_and_price__views"> 9 часов назад, 105 просмотров</p>
+        <p class="flat_page__price__views_and_price__price"> 16&nbsp480&nbsp000₽</p>
+      </div>
+      <div class="flat_page__tags">
+        <p class="flat_page__tags__mortgage">Ипотека от 89&nbsp547₽ в мес.</p>
+        <p class="flat_page__tags__show_online">Проверено в Росреестре</p>
+        <p class="flat_page__tags__rented">Хорошая цена</p>
+        <p class="flat_page__tags__bargaining">Торг</p>
+        <p class="flat_page__tags__easy_sale">Свободная продажа</p>
+        <div class="flat_page__tags__buttons">
+          <a class="flat_page__tags__phone_number" id="phone_number_7">
+            Показать телефон +7(xxx)xxx-xx-xx
+          </a>
+          <button class="flat_page__tags__favourites favourites_button">Добавить в избранное</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flat_page_info__characteristics_and_description">
+      <div class="flat_page_info__about_cur_flat">
+        <div class="flat_page_info__about_cur_flat__total_area">
+          <p> 90 м<sup>2</sup></p>
+          <p>общая</p>
+        </div>
+        <div class="flat_page_info__about_cur_flat__item">
+          <p>55,3 м <sup>2</sup></p>
+          <p>жилая</p>
+        </div>
+        <div class="flat_page_info__about_cur_flat__item">
+          <p>11,7 м <sup>2</sup></p>
+          <p>кухня</p>
+        </div>
+        <div class="flat_page_info__about_cur_flat__item">
+          <p>2 этаж</p>
+          <p>из 4</p>
+        </div>
+        <div class="flat_page_info__about_cur_flat__item">
+          <p>3,67 м</p>
+          <p>потолки</p>
+        </div>
+        <div class="flat_page_info__about_cur_flat__item">
+          <p>1828 год</p>
+          <p>год постройки</p>
+        </div>
+      </div>
+      <div class="flat_page_info__about_cur_flat_990px">
+        <p class="flat_page_info__about_cur_flat_990px__topic">Характеристики</p>
+        <p class="flat_page_info__about_cur_flat_990px__characteristics"><br>2 этаж из 4<br>
+          90 м<sup>2</sup> - общая площадь<br>
+          55,3 м<sup>2</sup> - кухня<br>
+          11,7 м<sup>2</sup> - жилая<br>
+          3,67 м - потолки<br>
+          1828 - год постройки<br>
+        </p>
+      </div>
+      <div class="flat_page__info__full_description">
+        <p>Описание</p>
+        <p class="flat_page__info__full_description__text">Предлагаем Вашему вниманию в прямой и срочной продаже
+          шикарную, просторную 2х комнатную квартиру с высокими потолками в центре города! Общая площадь 90
+          кв.м., просторные комнаты 29.6+25.7 кв.м. Раздельный санузел. Окна на Моховую. Кухня во двор.
+          Планировка изолированная. Квартира расположена на 2 этаже 4 этажного кирпичного дома, здание
+          построено в 1828 году, сделан капитальный ремонт в 1973 году. Санкт-Петербург по адресу Моховая дом
+          32, ближайшая станция метро Чернышевская. В пешей доступности Летний сад, Русский музей, театры,
+          рестораны и все что так привлекает любителей активной жизни. Квартира более 5-ти лет в
+          собственности. Перепланировок нет. Один собственник. Никто не прописан. Подходят любые формы
+          расчета. Показы в удобное для вас время, по предварительной договоренности.</p>
+      </div>
+      <div class="flat_page__info__full_description">
+        <p>Расположение</p>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="flat_page__price">
+    <div class="flat_page__price__views_and_price">
+      <p class="flat_page__price__views_and_price__views"> 9 часов назад, 105 просмотров</p>
+      <p class="flat_page__price__views_and_price__price"> 16&nbsp480&nbsp000₽</p>
+    </div>
+    <div class="flat_page__tags">
+      <p class="flat_page__tags__mortgage">Ипотека от 89&nbsp547₽ в мес.</p>
+      <p class="flat_page__tags__show_online">Проверено в Росреестре</p>
+      <p class="flat_page__tags__rented">Хорошая цена</p>
+      <p class="flat_page__tags__bargaining">Торг</p>
+      <p class="flat_page__tags__easy_sale">Свободная продажа</p>
+      <div class="flat_page__tags__buttons">
+        <a class="flat_page__tags__phone_number" id="phone_number_8">
+          Показать телефон +7(xxx)xxx-xx-xx
+        </a>
+        <button class="flat_page__tags__favourites favourites_button">Добавить в избранное</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer__copyright">
+      Copyright © 2021
+    </div>
+    <div class="footer__developers">
+            <span>
+                 designed with great desire <i class="far fa-heart"></i> by Kate <i class="fab fa-instagram"></i>
+                and Michael <i class="fab fa-instagram"></i>
+            </span>
+    </div>
+  </div>
+</footer>
+<script src="javascript/slide_show_for_first_flat.js"></script>
+<script src="javascript/phone_number_button.js"></script>
+<script src="javascript/add_to_fav_button.js"></script>
+</body>
+</html>

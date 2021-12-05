@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
 </head>
 <body>
 <header class="header">
@@ -65,76 +69,117 @@
     <div class="content">
         <div class="add-adv">
             <h1 class="add-adv__header">Разместить новое объявление</h1>
-            <form class="add-adv__form">
+            <form action="display.html" class="add-adv__form" method="GET" id="flat_form">
                 <div class="add-adv__info">
                     <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Кто вы?</div>
-                        <button class="add-adv__option">Владелец</button>
-                        <button class="add-adv__option">Риэлтор</button>
+                        <button class="add-adv__option who_is">Владелец</button>
+                        <button class="add-adv__option who_is">Риэлтор</button>
                     </div>
                     <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Тип сделки</div>
-                        <button class="add-adv__option">Аренда</button>
-                        <button class="add-adv__option">Продажа</button>
+                        <button class="add-adv__option deal_type">Аренда</button>
+                        <button class="add-adv__option deal_type">Продажа</button>
                     </div>
-                    <div class="add-adv__info__item">
-                        <div class="add-adv__form__title">Тип недвижимости</div>
-                        <button class="add-adv__option">Жилая</button>
-                        <button class="add-adv__option">Коммерческая</button>
-                    </div>
-                    <div class="add-adv__info__item">
+                    <div class="add-adv__info__item living">
                         <div class="add-adv__form__title">Объект сделки</div>
                         <ul class="object-options">
-                            <li class="object-options__item"><span>Офис</span></li>
-                            <li class="object-options__item"><span>Скадское помешение</span></li>
-                            <li class="object-options__item "><span>Здание</span></li>
-                            <li class="object-options__item"><span>Гараж</span></li>
-                            <li class="object-options__item"><span>Торговое место</span></li>
+                            <li class="object-options__item deal_object"><span>Квартира</span></li>
+                            <li class="object-options__item deal_object"><span>Дом</span></li>
                         </ul>
+                    </div>
+                    <div class="add-adv__info__item">
+                        <div class="add-adv__form__title">Готовы показать онлайн?</div>
+                        <button class="add-adv__option ready_to_show">Да</button>
+                        <button class="add-adv__option ready_to_show">Нет</button>
+                    </div>
+                    <div class="add-adv__info__item">
+                        <div class="add-adv__form__title">Цена</div>
+                        <button class="add-adv__option if_final_price">Окончательная</button>
+                        <button class="add-adv__option if_final_price">Договорная</button>
+                    </div>
+                    <div class="add-adv__info__item">
+                        <div class="add-adv__form__title">Ремонт</div>
+                        <button class="add-adv__option renovation">Требуется</button>
+                        <button class="add-adv__option renovation">Евро</button>
+                    </div>
+                    <div class="add-adv__info__item for-room-house-only-Object">
+                        <div class="add-adv__form__title">О доме</div>
+                        <div class="add-adv__parameters">
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Год постройки</div>
+                                <input type="number" name="house_year_of_construction"
+                                       class="object_parameter_input" required>
+                            </div>
+                        </div>
                     </div>
                     <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Об объекте</div>
                         <div class="add-adv__parameters">
                             <div class="add-adv__parameter">
-                                <div class="add-adv__parameter__text">Количество помещений</div>
-                                <input type="number" name="room_number"
-                                       class="object_parameter_input">
+                                <div class="add-adv__parameter__text">Количество комнат</div>
+                                <input type="number" name="flat_room_number" min="1"
+                                       class="object_parameter_input" required>
                             </div>
                             <div class="add-adv__parameter">
-                                <div class="add-adv__parameter__text">Площадь (кв. м.)</div>
-                                <input type="number" name="area"
-                                       class="object_parameter_input">
+                                <div class="add-adv__parameter__text">Общая площадь</div>
+                                <input type="number" min="0" name="flat_area_all"
+                                       class="object_parameter_input" required>
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Площадь кухни</div>
+                                <input type="number" min="0" name="flat_kitchen_area"
+                                       class="object_parameter_input" required>
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Жилая площадь</div>
+                                <input type="number" min="0" name="flat_living_area"
+                                       class="object_parameter_input" required>
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Площадь</div>
+                                <input type="number" min="0" name="area"
+                                       class="object_parameter_input" required>
                             </div>
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Высота ( м.)</div>
-                                <input type="number" name="height"
-                                       class="object_parameter_input">
+                                <input type="number" step="0.01" min="0" name="flat_ceiling_height"
+                                       class="object_parameter_input" required>
                             </div>
                             <div class="add-adv__parameter">
-                                <div class="add-adv__parameter__text">Состояние</div>
-                                <input type="text" name="condition"
-                                       class="object_parameter_input">
+                                <div class="add-adv__parameter__text">Этаж</div>
+                                <input type="number" min="1" name="flat_floor_number" style="margin-left: 0"
+                                       class="object_parameter_input object_parameter_input--small" required>
+                                <span> из </span>
+                                <input type="number" min="1" name="flat_total_floor_number"
+                                       class="object_parameter_input object_parameter_input--small" required>
+                            </div>
+                            <div class="add-adv__parameter">
+                                <div class="add-adv__parameter__text">Год постройки</div>
+                                <input type="number" min="1000" name="flat_year_of_building"
+                                       class="object_parameter_input" required>
                             </div>
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Мебель</div>
                                 <span class="furniture_buttons">
-                                <button class="add-adv__option">да</button>
-                                <button class="add-adv__option">нет</button>
+                                <button class="add-adv__option has_furniture">да</button>
+                                <button class="add-adv__option has_furniture">нет</button>
                             </span>
                             </div>
                         </div>
                     </div>
                     <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Адрес</div>
-                        <input type="text" name="location"
-                               class="object_parameter_input object_parameter_input--large">
+                        <input type="text" name="flat_location"
+                               class="object_parameter_input object_parameter_input--large" id="add_adv_address" required>
+                        <div id='add_adv_map'></div>
                     </div>
                     <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Фото</div>
-                        <div class="add_adv_photo_field object_parameter_input--large">
+                        <div class="add_adv_photo_field object_parameter_input--large" id="file_display_area">
                             <div class="add_adv_photo__inner">
-                                <input type="file" id="file" class="add-photo__input">
-                                <label for="file"><i class="fas fa-folder-open"></i></label>
+                                <input type="file" id="file-input" class="add-photo__input" multiple>
+                                <label for="file-input"><i class="fas fa-folder-open"></i></label>
                                 <div class="upload_photo_description">
                                     Загрузите свое фото сюда...
                                 </div>
@@ -143,26 +188,23 @@
                     </div>
                     <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title ">Описание</div>
-                        <input type="text" name="room_number"
-                               class="object_parameter_input object_parameter_input_description object_parameter_input--large">
+                        <textarea type="text" name="flat_description"
+                                  class="object_parameter_input object_parameter_input_description object_parameter_input--large"
+                                  required> </textarea>
                     </div>
                     <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Контактный номер</div>
                         <input type="tel" name="contact_number"
-                               class="object_parameter_input">
+                               class="object_parameter_input" required>
                     </div>
                     <div class="add-adv__info__item add-adv__info__item--block">
                         <div class="add-adv__form__title">Цена</div>
-                        <input type="number" name="price" class="object_parameter_input">
+                        <input type="number" name="price" class="object_parameter_input" required>
                         <select name="select_price" class="price">
                             <option value="dollar">$</option>
                             <option value="ruble">₽</option>
                             <option value="MDL">MDL</option>
                         </select>
-                    </div>
-                    <div class="add-adv__info__item add-adv__info__item--block">
-                        <div class="add-adv__form__title">Заголовок</div>
-                        <input type="text" name="title" class="object_parameter_input object_parameter_input--large">
                     </div>
                     <div class="add_adv_submit_button_field">
                         <button type="submit" class="add_adv_submit_button">Добавить объявление</button>
@@ -232,6 +274,7 @@
         </div>
     </div>
 </footer>
+<script src="javascript/add_adv_map.js"></script>
 <script src="javascript/header_popup_menu.js"></script>
 <script src="javascript/add_adv_form.js"></script>
 </body>

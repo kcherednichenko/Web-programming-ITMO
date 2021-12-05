@@ -126,7 +126,8 @@ select {
     font-weight: bold;
     margin-right: 10px;
 }
-.price{
+
+.price {
     background-color: #298F6B;
     border-radius: 15px;
     border: none;
@@ -207,7 +208,7 @@ select {
     padding-top: 50px;
     height: 100%;
     z-index: 3;
-    transform: translate(100% ,0);
+    transform: translate(100%, 0);
     transition: transform .5s ease-in-out;
     background: linear-gradient(to right, #3084b9 0%, #54a27a 100%);
 }
@@ -305,7 +306,8 @@ select {
     padding-top: 40px;
     font-weight: lighter;
 }
-.popup-nav_item_text{
+
+.popup-nav_item_text {
     text-decoration: none;
     color: white;
     font-size: 36px;
@@ -343,6 +345,8 @@ select {
 
 .flat_page__info__image {
     font-size: 200px;
+    height: 376px;
+    width: 817px;
 }
 
 .views {
@@ -371,6 +375,12 @@ select {
     background-color: #90C6B2;
 }
 
+.ad-adv__form__image {
+    padding: 10px;
+    max-height: 200px;
+    max-width: 200px;
+}
+
 .add-adv__info {
     list-style-type: none;
 }
@@ -384,7 +394,8 @@ select {
     margin-bottom: 20px;
     margin-left: 50px;
 }
-.add-adv__info__item--block{
+
+.add-adv__info__item--block {
     display: block;
 }
 
@@ -402,6 +413,9 @@ select {
     height: 40px;
     border-radius: 20px;
     transition: color, background-color .2s linear;
+    background-color: #298F6B;
+    border: 0;
+    cursor: pointer;
 }
 
 .add-adv__option:hover {
@@ -412,6 +426,12 @@ select {
 .add-adv__info__item .active {
     background-color: black;
     color: white;
+}
+
+#add_adv_map{
+    width: 90%;
+    height: 400px;
+    margin-top: 20px;
 }
 
 .object-options {
@@ -471,7 +491,7 @@ select {
 }
 
 .object_parameter_input--large {
-   width: 90%;
+    width: 90%;
 }
 
 .furniture_buttons .add-adv__option {
@@ -492,11 +512,18 @@ select {
     width: 575px;
 }
 
+.object_parameter_input--small {
+    width: 90px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 
 .add_adv_photo_field {
     height: 210px;
     background-color: #298F6B;
     position: relative;
+    border-radius: 5px;
 }
 
 /*main-page*/
@@ -683,6 +710,7 @@ select {
 .object_parameter_input_description {
     height: 150px;
     text-align: justify;
+    border-radius: 5px;
 }
 
 .add_adv_submit_button_field {
@@ -704,15 +732,18 @@ select {
     background-color: black;
     color: white;
 }
-.add_adv_photo__inner{
+
+.add_adv_photo__inner {
     position: absolute;
     top: 10%;
     left: 30%;
     text-align: center;
 }
-.add-photo__input{
+
+.add-photo__input {
     display: none;
 }
+
 /*advertisement*/
 .advertisement {
 }
@@ -909,8 +940,13 @@ select {
 .show-number-button {
     color: white;
     width: auto;
-    padding: 0 30px;
+    padding: 10px 30px;
     margin-right: 40px;
+    background-color: #298F6B;
+    display: inline-block;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .add-to-favourite-button {
@@ -960,6 +996,27 @@ select {
 }
 
 .flat_page__tags__show_online {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__has_renovation {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__who_is {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #DED7D7;
+    margin: 7px;
+}
+
+.flat_page__tags__has_furniture {
     border-radius: 15px;
     padding: 5px;
     background-color: #DED7D7;
@@ -1385,10 +1442,12 @@ footer {
     .nav {
         display: none;
     }
-    .header .header_buttons{
+
+    .header .header_buttons {
         display: none;
     }
-    .header_buttons.active_button{
+
+    .header_buttons.active_button {
         display: flex;
     }
 
@@ -1396,11 +1455,13 @@ footer {
         margin-left: auto;
         flex-direction: column;
     }
-    .header_add_adv_btn{
+
+    .header_add_adv_btn {
         width: 250px;
         margin: 20px auto;
     }
-    .header_enter_btn{
+
+    .header_enter_btn {
         margin: 0 auto;
     }
 
@@ -1476,10 +1537,12 @@ footer {
         left: 35%;
         top: 55%;
     }
+
     /*footer*/
-    footer{
+    footer {
         font-size: 18px;
     }
+
     .flat_page__inner {
         flex-direction: column;
     }
@@ -1556,10 +1619,11 @@ footer {
     }
 
     /*add-adv*/
-    .add_adv_photo__inner{
+    .add_adv_photo__inner {
         top: 10%;
         left: 15%
     }
+
     /*advertisement */
     .advertisement__item {
         width: 90%;
@@ -1631,6 +1695,14 @@ footer {
     .object_parameter_input_description {
         width: 90%;
     }
+    textarea::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5; }
+
+    textarea::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #4285F4; }
 
     /*advertisement*/
     .side-panel-info__header {
@@ -1640,11 +1712,13 @@ footer {
     .side-panel-links {
         font-size: 40px;
     }
+
     /*footer*/
-    footer{
+    footer {
         font-size: 10px;
     }
-    .fa-instagram{
+
+    .fa-instagram {
         padding: 1px 2px;
         border-radius: 3px;
     }
@@ -1653,7 +1727,8 @@ footer {
     .mortgage-list__buttons {
         display: block;
     }
-    .mortgage-list{
+
+    .mortgage-list {
         margin-left: 0;
     }
 
@@ -1668,13 +1743,16 @@ footer {
     .search_result {
         padding-left: 30px;
     }
-    .filters{
+
+    .filters {
         padding-left: 0;
     }
-    .filter__item{
+
+    .filter__item {
         margin-left: 3px;
     }
-    .filter__value{
+
+    .filter__value {
         width: 100px;
     }
 

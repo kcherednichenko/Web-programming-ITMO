@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+</head>
+<body>
+<header class="header">
+    <div class="header_info">
+        <a href="index.html" class="header_logo">
+            <img src="images/header/logo.png" alt="logo">
+        </a>
+        <ul class="nav">
+            <li class="nav_item">
+                <a href="flats_list.html" class="nav_item_text">Аренда</a>
+            </li>
+            <li class="nav_item">
+                <a href="flats_list.html" class="nav_item_text">Продажа</a>
+            </li>
+            <li class="nav_item">
+                <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header_buttons">
+        <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+            <p class="header_add_adv_text">+&nbsp;Добавить&nbsp;объявление</p>
+        </button>
+        <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+            <p class="header_add_adv_text">Войти</p>
+        </button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">Menu</button>
+    <ul class="popup_nav" id="popup_nav">
+        <li class="popup_nav__item">
+            <a href="flats_list.html" class="popup-nav_item_text">Аренда</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="flats_list.html" class="popup-nav_item_text">Продажа</a>
+        </li>
+        <li class="popup_nav__item">
+            <a href="mortgage_find.html" class="popup-nav_item_text">Ипотека</a>
+        </li>
+        <div class="header_buttons active_button">
+            <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
+                <p class="header_add_adv_text">+&nbsp;Добавить&nbsp;объявление</p>
+            </button>
+            <button class="header_enter_btn" onclick="window.location.href='log_page.html'">
+                <p class="header_add_adv_text">Войти</p>
+            </button>
+        </div>
+    </ul>
+</header>
+
+<p class="search_result">
+    Купить <span class="flat_room_number"></span><span id="deal_object">-комнатную квартиру</span>
+</p>
+<div class="background_for_one_flat_page">
+    <div class="flat_page__info">
+        <div class="flat_history_buttons_block">
+            <by_button class="buy_button">Купить ></by_button>
+            <by_button class="buy_flat_button"><span id="deal_object_string"></span> ></by_button>
+            <by_button class="buy_two-room_apartment"><span class="room_number_string"></span></by_button>
+        </div>
+        <div class="flat_page__info__images">
+            <!-- Slideshow container -->
+            <div class="slideshow-container" id="slider-container">
+
+                <!-- Full-width images with number and caption text -->
+                <template id="slider-template">
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img class=flat_page__info__image" style="width:100%" alt="" src="">
+                    </div>
+                </template>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="flat_page_info__tags_and_other">
+            <div class="flat_page__price__views_and_price">
+                <p class="flat_page__price__views_and_price__views"> 6 часов назад, 83 просмотра</p>
+                <p class="flat_page__price__views_and_price__price flat_price"> 29&nbsp500&nbsp000₽</p>
+            </div>
+            <div class="flat_page__tags">
+                <p class="flat_page__tags__mortgage">Ипотека от 156&nbsp889₽ в мес.</p>
+                <p class="flat_page__tags__show_online">Готовы показать онлайн</p>
+                <p class="flat_page__tags__who_is">Объявление от собственника</p>
+                <p class="flat_page__tags__has_furniture">Уже есть мебель</p>
+                <p class="flat_page__tags__has_renovation">Есть евро ремонт</p>
+                <p class="flat_page__tags__leased_house">Дом построен в <span class="house_year_of_construction"></span> г.</p>
+                <p class="flat_page__tags__bargaining">Торг</p>
+                <p class="flat_page__tags__easy_sale">Свободная продажа</p>
+                <div class="flat_page__tags__buttons">
+                    <a class="flat_page__tags__phone_number" id="flat_phone_number-1">
+                        Показать телефон +7(xxx)xxx-xx-xx
+                    </a>
+                    <button class="flat_page__tags__favourites">Добавить в избранное</button>
+                </div>
+            </div>
+            <div class="flat_page__price__developer">
+                <p class="flat_page__price__developer__heading">Застройщик</p>
+                <img class="flat_page__price__developer__image" src="images/Stroitel'nyj_trest.png" alt="">
+            </div>
+        </div>
+
+        <div class="flat_page_info__characteristics_and_description">
+            <div class="flat_page_info__about_cur_flat">
+                <div class="flat_page_info__about_cur_flat__total_area">
+                    <p><span class="flat_area_all"></span> м<sup>2</sup></p>
+                    <p>общая</p>
+                </div>
+                <div class="flat_page_info__about_cur_flat__item">
+                    <p><span class="flat_living_area"></span> м <sup>2</sup></p>
+                    <p>жилая</p>
+                </div>
+                <div class="flat_page_info__about_cur_flat__item">
+                    <p><span class="flat_kitchen_area"></span> м <sup>2</sup></p>
+                    <p>кухня</p>
+                </div>
+                <div class="flat_page_info__about_cur_flat__item">
+                    <p><span class="flat_floor_number"></span> этаж</p>
+                    <p>из <span class="flat_total_floor_number"></span></p>
+                </div>
+                <div class="flat_page_info__about_cur_flat__item">
+                    <p><span class="flat_ceiling_height"></span> м</p>
+                    <p>потолки</p>
+                </div>
+                <div class="flat_page_info__about_cur_flat__item">
+                    <p><span class="flat_year_of_building"></span> год</p>
+                    <p>год постройки</p>
+                </div>
+            </div>
+            <div class="flat_page_info__about_cur_flat_990px">
+                <p class="flat_page_info__about_cur_flat_990px__topic">Характеристики</p>
+                <p class="flat_page_info__about_cur_flat_990px__characteristics"><br> <span
+                        class="flat_floor_number"></span> этаж из <span class="flat_total_floor_number"></span><br>
+                    <span class="flat_area_all"></span> м<sup>2</sup> - общая площадь<br>
+                    <span class="flat_kitchen_area"></span> м<sup>2</sup> - кухня<br>
+                    <span class="flat_living_area"></span> м<sup>2</sup> - жилая<br>
+                    <span class="flat_ceiling_height"></span> м - потолки<br>
+                    <span class="flat_year_of_building"></span> - год постройки<br>
+                </p>
+            </div>
+            <div class="flat_page__info__full_description">
+                <p>Описание</p>
+                <p class="flat_page__info__full_description__text flat_description"></p>
+            </div>
+            <div class="flat_page__info__full_description">
+                <p>Расположение</p>
+                <p class="flat_page__info__full_description__text flat_location"></p>
+                <div id='add_adv_map'></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="flat_page__price">
+        <div class="flat_page__price__views_and_price">
+            <p class="flat_page__price__views_and_price__views"> 6 часов назад, 83 просмотра</p>
+            <p class="flat_page__price__views_and_price__price flat_price"> 29&nbsp500&nbsp000₽</p>
+        </div>
+        <div class="flat_page__tags">
+            <p class="flat_page__tags__mortgage">Ипотека от 156&nbsp889₽ в мес.</p>
+            <p class="flat_page__tags__show_online">Готовы показать онлайн</p>
+            <p class="flat_page__tags__who_is">Объявление от собственника</p>
+            <p class="flat_page__tags__has_furniture">Уже есть мебель</p>
+            <p class="flat_page__tags__has_renovation">Есть евро ремонт</p>
+            <p class="flat_page__tags__leased_house">Сдан в <span class="house_year_of_construction"></span> г.</p>
+            <p class="flat_page__tags__bargaining">Торг</p>
+            <p class="flat_page__tags__easy_sale">Свободная продажа</p>
+            <div class="flat_page__tags__buttons">
+                <a class="flat_page__tags__phone_number" id="flat_phone_number-2">
+                    Показать телефон +7(xxx)xxx-xx-xx
+                </a>
+                <button class="flat_page__tags__favourites">Добавить в избранное</button>
+            </div>
+        </div>
+        <div class="flat_page__price__developer">
+            <p class="flat_page__price__developer__heading">Застройщик</p>
+            <img class="flat_page__price__developer__image" src="images/Stroitel'nyj_trest.png" alt="">
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-inner">
+        <div class="footer__copyright">
+            Copyright © 2021
+        </div>
+        <div class="footer__developers">
+            <span>
+                 designed with great desire <i class="far fa-heart"></i> by Kate <i class="fab fa-instagram"></i>
+                and Michael <i class="fab fa-instagram"></i>
+            </span>
+        </div>
+    </div>
+</footer>
+<script src="javascript/header_popup_menu.js"></script>
+<script src="javascript/phone_number_button.js"></script>
+<script src="javascript/display_flat.js"></script>
+<script src="javascript/slide_show_for_first_flat.js"></script>
+</body>
+</html>

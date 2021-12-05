@@ -3,12 +3,12 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWlsZW5pdW1taSIsImEiOiJja3dzYWdkYm0wYnBoMnlta
 let map = new mapboxgl.Map({
     container: 'add_adv_map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [30.308281, 59.957086],
+    center: [30.345618, 59.940869],
     zoom:16
 })
 
 let marker = new mapboxgl.Marker()
-.setLngLat([30.308281, 59.957086])
+.setLngLat([30.345618, 59.940869])
 .addTo(map)
 const geocoder = new MapboxGeocoder({
     // Initialize the geocoder

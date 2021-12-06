@@ -401,13 +401,13 @@ select {
 }
 
 .add-adv__info__item {
-    display: flex;
+    display: none;
     margin-bottom: 20px;
     margin-left: 50px;
 }
 
 .add-adv__info__item--block {
-    display: block;
+    display: none;
 }
 
 .add-adv__form__title {
@@ -1503,6 +1503,7 @@ footer {
     /*add adv*/
     .add-adv__info__item {
         margin-left: 25px;
+
     }
 
     .add-adv__parameter {

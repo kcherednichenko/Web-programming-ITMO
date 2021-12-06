@@ -95,9 +95,6 @@ window.onload = function () {
     // скрыть все элементы кроме первого
     let itemsToShowOneByOne = document.getElementsByClassName('add-adv__info__item')
     let currentDisplayedItem = 0
-    for (let i = 1; i < itemsToShowOneByOne.length; i++) {
-        itemsToShowOneByOne[i].style.display = 'none'
-    }
 
     document.getElementById('form_last_item_to_show').addEventListener('click', function (e) {
         e.preventDefault()

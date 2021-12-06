@@ -2,40 +2,51 @@ window.onload = function () {
     const options = document.getElementsByClassName("add-adv__option")
     const objectTypeOptions = document.getElementsByClassName("object-options__item")
 
+    const containsUsedForShowing = (el) => el.classList.contains('used-for-showing')
+
     const add_active_class = function (objects, classname) {
         for (let i = 0; i < objects.length; i++) {
             objects[i].addEventListener('click', function (event) {
                 event.preventDefault()
-                if (objects[i].classList.contains(classname)) {
-                    objects[i].classList.remove(classname)
-                } else {
-                    let elementsInDiv = objects[i].parentElement.children
-                    Array.from(elementsInDiv).forEach(function (el) {
-                        if (el.classList.contains(classname)) {
-                            el.classList.remove(classname)
+                let elementsInDiv = objects[i].parentElement.children
+                Array.from(elementsInDiv).forEach(function (el) {
+                    if (el.classList.contains(classname)) {
+                        el.classList.remove(classname)
+                    }
+                })
+                objects[i].classList.add(classname)
+                if (!Array.from(elementsInDiv).some(containsUsedForShowing)) {
+                    if (objects[i].classList.contains('has_furniture')) {
+                        for (currentDisplayedItem; currentDisplayedItem < itemsToShowOneByOne.length; currentDisplayedItem++) {
+                            if (itemsToShowOneByOne[currentDisplayedItem].classList.contains('add-adv__info__item--block')) {
+                                itemsToShowOneByOne[currentDisplayedItem].style.display = 'block'
+                            } else
+                                itemsToShowOneByOne[currentDisplayedItem].style.display = 'flex'
                         }
-                    })
-                    objects[i].classList.add(classname)
+                    } else {
+                        currentDisplayedItem++
+                        if (itemsToShowOneByOne[currentDisplayedItem].classList.contains('add-adv__info__item--block')) {
+                            itemsToShowOneByOne[currentDisplayedItem].style.display = 'block'
+                        } else
+                            itemsToShowOneByOne[currentDisplayedItem].style.display = 'flex'
+                    }
+                    objects[i].classList.add('used-for-showing')
                 }
-                displayNextAddAdvItem()
+
             });
         }
     }
-
-    function displayNextAddAdvItem() {
-        for (const item of addAdvItems) {
-            if (item.style.display === 'none') {
-                item.style.display = 'flex'
-                break
-            }
+    document.getElementById('house_year_of_construction').addEventListener('click', function (e) {
+        e.preventDefault()
+        if (!e.target.classList.contains('used-for-showing')) {
+            currentDisplayedItem++
+            if (itemsToShowOneByOne[currentDisplayedItem].classList.contains('add-adv__info__item--block')) {
+                itemsToShowOneByOne[currentDisplayedItem].style.display = 'block'
+            } else
+                itemsToShowOneByOne[currentDisplayedItem].style.display = 'flex'
+            e.target.classList.add('used-for-showing')
         }
-    }
-
-    const addAdvItems = document.getElementsByClassName('add-adv__info__item')
-    // for (let i = 1; i < addAdvItems.length; i++){
-    //     addAdvItems[i].style.display = 'none'
-    // }
-
+    })
     add_active_class(options, 'active')
     add_active_class(objectTypeOptions, 'active_object')
 
@@ -62,28 +73,6 @@ window.onload = function () {
         }
     }, false)
 
-    // const flatRoomAdvObject = document.getElementById('flat_adv_house_type')
-    // flatRoomAdvObject.addEventListener('click', function (e) {
-    //     e.preventDefault()
-    //     const objectNotAssignableToHouseType = document.getElementsByClassName('for-room-house-only-Object')
-    //     if (flatRoomAdvObject.classList.contains('notAssignableObjectsDeleted')) {
-    //         for (const obj of objectNotAssignableToHouseType) {
-    //             obj.style.visibility = 'visible'
-    //             obj.style.height = '40px'
-    //             obj.required = true
-    //             obj.style.marginBottom = '8px'
-    //             flatRoomAdvObject.classList.remove('notAssignableObjectsDeleted')
-    //         }
-    //     } else {
-    //         for (const obj of objectNotAssignableToHouseType) {
-    //             obj.style.visibility = 'hidden'
-    //             obj.style.height = '0'
-    //             obj.required = false
-    //             flatRoomAdvObject.classList.add('notAssignableObjectsDeleted')
-    //         }
-    //
-    //     }
-    // })
     document.getElementById('flat_form').addEventListener('submit', function (e) {
         const addValuesToLocalStorage = (paramNames, className) => {
             paramNames.forEach(paramName => {
@@ -97,9 +86,21 @@ window.onload = function () {
             })
         }
         addValuesToLocalStorage(['who_is', 'deal_type', 'estate_type', 'if_final_price',
-            'ready_to_show', 'renovation', 'has_furniture'], 'active')
+            'ready_to_show', 'renovation', 'has_furniture', 'sale_type'], 'active')
         addValuesToLocalStorage(['deal_object'], 'active_object')
 
         localStorage.setItem('ImagesForOneFlat', JSON.stringify(imageSources))
+    })
+    // показывать элементы формы 1 за другим
+    // скрыть все элементы кроме первого
+    let itemsToShowOneByOne = document.getElementsByClassName('add-adv__info__item')
+    let currentDisplayedItem = 0
+    for (let i = 1; i < itemsToShowOneByOne.length; i++) {
+        itemsToShowOneByOne[i].style.display = 'none'
+    }
+
+    document.getElementById('form_last_item_to_show').addEventListener('click', function (e) {
+        e.preventDefault()
+        document.getElementsByClassName('add_adv_submit_button_field')[0].style.display = 'flex'
     })
 }

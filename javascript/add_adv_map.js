@@ -3,22 +3,22 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWlsZW5pdW1taSIsImEiOiJja3dzYWdkYm0wYnBoMnlta
 let map = new mapboxgl.Map({
     container: 'add_adv_map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [30.308281, 59.957086],
-    zoom:16
+    center: [30.316704, 59.950543],
+    zoom: 14
 })
 
 let marker = new mapboxgl.Marker()
-.setLngLat([30.308281, 59.957086])
-.addTo(map)
+    .setLngLat([30.316704, 59.950543])
+    .addTo(map)
 const geocoder = new MapboxGeocoder({
     // Initialize the geocoder
     accessToken: mapboxgl.accessToken, // Set the access token
     placeholder: 'Искать в Санкт-Петербурге',
     mapboxgl: mapboxgl, // Set the mapbox-gl instance
     bbox: [29.928372, 59.751445, 30.664948, 60.102403],
-    proximity:{
-        longitude:30.308281,
-        latitude:59.957086
+    proximity: {
+        longitude: 30.308281,
+        latitude: 59.957086
     }
 });
 
@@ -27,9 +27,8 @@ map.addControl(geocoder);
 
 map.on('click', addMarker)
 
-function addMarker(event){
+function addMarker(event) {
     let coordinates = event.lngLat
-    console.log(event)
     marker.setLngLat(coordinates).addTo(map)
     getReverseGeocode(coordinates)
 }
@@ -45,12 +44,12 @@ function get_information(link, callback) {
     xhr.send(null)
 }
 
-function getReverseGeocode(coordinates){
+function getReverseGeocode(coordinates) {
     let lat = coordinates.lng;
     let lng = coordinates.lat;
     localStorage.setItem('address_coords', JSON.stringify(coordinates))
     let url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + lat + "," + lng + ".json?access_token=" + mapboxgl.accessToken;
-    get_information(url, function (res){
+    get_information(url, function (res) {
         let address = JSON.parse(res).features[0].place_name
         address = address.replace('Russia', "")
         address = address.replace('Saint Petersburg', "")

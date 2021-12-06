@@ -13,7 +13,9 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+    <link rel='stylesheet'
+          href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css'
+          type='text/css'/>
 </head>
 <body>
 <header class="header">
@@ -81,7 +83,12 @@
                         <button class="add-adv__option deal_type">Аренда</button>
                         <button class="add-adv__option deal_type">Продажа</button>
                     </div>
-                    <div class="add-adv__info__item living">
+                    <div class="add-adv__info__item">
+                        <div class="add-adv__form__title">Тип продажи</div>
+                        <button class="add-adv__option sale_type">Свободная</button>
+                        <button class="add-adv__option sale_type">Альтернативная</button>
+                    </div>
+                    <div class="add-adv__info__item">
                         <div class="add-adv__form__title">Объект сделки</div>
                         <ul class="object-options">
                             <li class="object-options__item deal_object"><span>Квартира</span></li>
@@ -89,7 +96,7 @@
                         </ul>
                     </div>
                     <div class="add-adv__info__item">
-                        <div class="add-adv__form__title">Готовы показать онлайн?</div>
+                        <div class="add-adv__form__title" style="margin-bottom: 5px">Готовы показать онлайн?</div>
                         <button class="add-adv__option ready_to_show">Да</button>
                         <button class="add-adv__option ready_to_show">Нет</button>
                     </div>
@@ -108,7 +115,7 @@
                         <div class="add-adv__parameters">
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Год постройки</div>
-                                <input type="number" name="house_year_of_construction"
+                                <input id="house_year_of_construction" type="number" name="house_year_of_construction"
                                        class="object_parameter_input" required>
                             </div>
                         </div>
@@ -134,11 +141,6 @@
                             <div class="add-adv__parameter">
                                 <div class="add-adv__parameter__text">Жилая площадь</div>
                                 <input type="number" min="0" name="flat_living_area"
-                                       class="object_parameter_input" required>
-                            </div>
-                            <div class="add-adv__parameter">
-                                <div class="add-adv__parameter__text">Площадь</div>
-                                <input type="number" min="0" name="area"
                                        class="object_parameter_input" required>
                             </div>
                             <div class="add-adv__parameter">
@@ -168,13 +170,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="add-adv__info__item add-adv__info__item--block">
+                    <div class="add-adv__info__item add-adv__info__item--block add-info-address">
                         <div class="add-adv__form__title">Адрес</div>
                         <input type="text" name="flat_location"
-                               class="object_parameter_input object_parameter_input--large" id="add_adv_address" required>
+                               class="object_parameter_input object_parameter_input--large" id="add_adv_address"
+                               required>
                         <div id='add_adv_map'></div>
                     </div>
-                    <div class="add-adv__info__item add-adv__info__item--block">
+                    <div class="add-adv__info__item add-adv__info__item--block file_listener">
                         <div class="add-adv__form__title">Фото</div>
                         <div class="add_adv_photo_field object_parameter_input--large" id="file_display_area">
                             <div class="add_adv_photo__inner">
@@ -197,12 +200,12 @@
                         <input type="tel" name="contact_number"
                                class="object_parameter_input" required>
                     </div>
-                    <div class="add-adv__info__item add-adv__info__item--block">
+                    <div class="add-adv__info__item add-adv__info__item--block" id="form_last_item_to_show">
                         <div class="add-adv__form__title">Цена</div>
                         <input type="number" name="price" class="object_parameter_input" required>
                         <select name="select_price" class="price">
-                            <option value="dollar">$</option>
                             <option value="ruble">₽</option>
+                            <option value="dollar">$</option>
                             <option value="MDL">MDL</option>
                         </select>
                     </div>
@@ -215,9 +218,9 @@
         <div class="advertisement">
             <h1 class="advertisement-title">Популярные объявления</h1>
             <div class="advertisement-inner">
-                <div class="advertisement__item">
+                <div class="advertisement__item" onclick="window.location.href = 'second_flat.html'">
                     <div class="side-panel-info">
-                        <h3 class="side-panel-info__header">дом в центре на Варшавке</h3>
+                        <h3 class="side-panel-info__header">дом в центре на Моховой</h3>
                         <div class="side-panel-links">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-share"></i>

@@ -13,7 +13,9 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+    <link rel='stylesheet'
+          href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css'
+          type='text/css'/>
 </head>
 <body>
 <header class="header">
@@ -64,14 +66,14 @@
 </header>
 
 <p class="search_result">
-    Купить <span class="flat_room_number"></span><span id="deal_object">-комнатную квартиру</span>
+    Купить <span class="flat_room_number"></span><span id="deal_object_string">-комнатную квартиру</span>
 </p>
 <div class="background_for_one_flat_page">
     <div class="flat_page__info">
         <div class="flat_history_buttons_block">
-            <by_button class="buy_button">Купить ></by_button>
-            <by_button class="buy_flat_button"><span id="deal_object_string"></span> ></by_button>
-            <by_button class="buy_two-room_apartment"><span class="room_number_string"></span></by_button>
+            <div class="flat_page__info__button">Купить ></div>
+            <div class="flat_page__info__button">&nbsp;<span id="deal_object"></span> ></div>
+            <div class="flat_page__info__button">&ensp;<span class="room_number_string"></span></div>
         </div>
         <div class="flat_page__info__images">
             <!-- Slideshow container -->
@@ -105,12 +107,12 @@
                 <p class="flat_page__price__views_and_price__price flat_price"> 29&nbsp500&nbsp000₽</p>
             </div>
             <div class="flat_page__tags">
-                <p class="flat_page__tags__mortgage">Ипотека от 156&nbsp889₽ в мес.</p>
                 <p class="flat_page__tags__show_online">Готовы показать онлайн</p>
                 <p class="flat_page__tags__who_is">Объявление от собственника</p>
                 <p class="flat_page__tags__has_furniture">Уже есть мебель</p>
                 <p class="flat_page__tags__has_renovation">Есть евро ремонт</p>
-                <p class="flat_page__tags__leased_house">Дом построен в <span class="house_year_of_construction"></span> г.</p>
+                <p class="flat_page__tags__leased_house">Дом построен в <span class="house_year_of_construction"></span>
+                    г.</p>
                 <p class="flat_page__tags__bargaining">Торг</p>
                 <p class="flat_page__tags__easy_sale">Свободная продажа</p>
                 <div class="flat_page__tags__buttons">
@@ -182,7 +184,6 @@
             <p class="flat_page__price__views_and_price__price flat_price"> 29&nbsp500&nbsp000₽</p>
         </div>
         <div class="flat_page__tags">
-            <p class="flat_page__tags__mortgage">Ипотека от 156&nbsp889₽ в мес.</p>
             <p class="flat_page__tags__show_online">Готовы показать онлайн</p>
             <p class="flat_page__tags__who_is">Объявление от собственника</p>
             <p class="flat_page__tags__has_furniture">Уже есть мебель</p>

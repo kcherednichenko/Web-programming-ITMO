@@ -148,7 +148,12 @@ params.who_is_owner = whoIsOwner
 if (whoIsOwner === 'Риэлтор') {
     dontDisplayTag('flat_page__tags__who_is')
 }
-
+//свободная продажа
+const saleType = localStorage.getItem('sale_type')
+params.sale_type = saleType
+if (saleType === 'Альтернативная') {
+    dontDisplayTag('flat_page__tags__easy_sale')
+}
 //phone number
 let contactNumber = params['contact_number'].replaceAll('+', ' ')
 contactNumber = '+' + contactNumber
@@ -164,7 +169,8 @@ dealObjectString = '-комнатная квартира'
 if (dealObject === 'Дом') {
     dealObjectString = '-комнатный дом'
 }
-document.getElementById('deal_object').innerText = dealObjectString
+document.getElementById('deal_object_string').innerText = dealObjectString
+document.getElementById('deal_object').innerText = dealObject
 params.deal_object_string = dealObjectString
 params.deal_object = dealObject
 
@@ -172,9 +178,9 @@ let advNumber = localStorage.getItem('adv_number')
 if (advNumber !== undefined) {
     advNumber = 1 + parseInt(advNumber)
 } else {
-   advNumber = 1
+    advNumber = 1
 }
 localStorage.setItem('adv_number', advNumber)
-let flatStorageName = 'flat_advertisement-'+ advNumber
+let flatStorageName = 'flat_advertisement-' + advNumber
 localStorage.setItem(flatStorageName, JSON.stringify(params))
-console.log(JSON.parse(localStorage.getItem('flat_advertisement-12')))
+console.log(JSON.parse(localStorage.getItem('flat_advertisement-1')))

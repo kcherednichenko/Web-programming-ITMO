@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
 </head>
 <body>
 <header class="header">
@@ -26,6 +30,12 @@
       </li>
       <li class="nav_item">
         <a href="mortgage_find.html" class="nav_item_text">Ипотека</a>
+      </li>
+      <li class="nav_item">
+        <a href="my_advertisements.html" class="nav_item_text">Мои&nbsp;объявления</a>
+      </li>
+      <li class="nav_item">
+        <a href="favourites.html" class="nav_item_text">Избранное</a>
       </li>
     </ul>
   </div>
@@ -47,6 +57,12 @@
     </li>
     <li class="popup_nav__item">
       <a href="mortgage_find.html" class="popup-nav_item_text">Ипотека</a>
+    </li>
+    <li class="popup_nav__item">
+      <a href="my_advertisements.html" class="popup-nav_item_text">Мои&nbsp;объявления</a>
+    </li>
+    <li class="popup_nav__item">
+      <a href="favourites.html" class="popup-nav_item_text">Избранное</a>
     </li>
     <div class="header_buttons active_button">
       <button class="header_add_adv_btn" onclick="window.location.href='add_adv.html'">
@@ -185,7 +201,7 @@
       </div>
       <div class="flat_page__info__full_description">
         <p>Расположение</p>
-
+        <div class="flat_page__info__full_description__map" id="flat_Mohovaya_map"> </div>
       </div>
     </div>
 
@@ -226,5 +242,7 @@
 <script src="javascript/slide_show_for_first_flat.js"></script>
 <script src="javascript/phone_number_button.js"></script>
 <script src="javascript/add_to_fav_button.js"></script>
+<script src="javascript/second_flat_map.js"></script>
+<script src="javascript/header_popup_menu.js"> </script>
 </body>
 </html>
